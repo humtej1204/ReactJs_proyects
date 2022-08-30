@@ -1,0 +1,136 @@
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: #4285F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: Inter;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-section {
+    width: 85%;
+    min-width: 1050px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* LogoSection */
+.logo-sect{
+    border-radius: 100%;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-sect>img {
+    height: 110px;
+}
+
+/* Links Section */
+.info-sect {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 65%;
+    min-width: 700px;
+    padding: 0 30px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.sub-content {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.info-sect>div, .contact-sect>li>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-sect {
+    width: 45%;
+    min-width: 360px;
+}
+
+/* Social Media Section */
+.social-sect {
+    width: 10%;
+    min-width: 150px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-sect img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.social-sect .title {
+    text-align: right;
+}
+
+.social-sect .sub-title {
+    text-align: right;  
+    display: block;
+}
+
+.sub-title br {
+    line-height: 0;
+}
+
+
+/* Sponsor Section */
+.sponsor-section {
+    width: 85%;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.sponsor-section>div, .sponsor-section ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sponsor-section ul {
+    width: 550px;
+}
