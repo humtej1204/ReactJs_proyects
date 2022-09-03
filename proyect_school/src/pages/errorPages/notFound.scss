@@ -1,0 +1,13 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+.notFound>.component1, .notFound>.component2, .notFound>.nf_c01, .notFound>.nf_c02 {
+    scroll-snap-align: start;
+}
+
+.notFound>.nf_c01, .notFound>.nf_c02 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,160 @@
+@import 'src/index.scss';
+
+.header {
+    @include elem-flex( space-between );
+    @include elem-size( 100%, 80px );
+    background-color: var(--blue);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+.onIt {
+    border-bottom: #fff 2px solid;
+}
+
+/* Logo Section */
+.logo {
+    @include elem-flex( center, center );
+    width: 300px;
+    background-color: #fff;
+    border-radius: 0 0 100px 0;
+
+    .logo-text {
+        margin-left: 5%;
+        margin-right: 10%;
+        font-family: Amaranth;
+        font-size: 20px;
+    }
+}
+
+/* Nav Section */
+.nav {
+    color: #fff;
+    font-family: Anek Devanagari;
+    width: 850px;
+    @include elem-flex( flex-end, center );
+
+    .nav-links {
+        width: 600px;
+        @include elem-flex( center, center );
+
+        .main-links {
+            @include elem-size( 560px, 80px );
+            @include elem-flex( space-between );
+            color: #fff;
+    
+            li {
+                @include elem-flex( center, center );
+    
+                &:hover .sub-nav {
+                    visibility: visible;
+                    z-index: 10;
+                }
+            }
+
+            /* Sub-Nav Section */
+            .sub-nav {
+                color: var(--medium-text);
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 65px;
+                display: flex;
+                flex-direction: column;
+                visibility: hidden;
+
+                &::before {
+                    content: '';
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 12px solid #fff;
+                    position: absolute;
+                    top: -10px;
+                    align-self: center;
+                }
+
+                img {
+                    height: 20px;
+                    filter: invert(34%)
+                            sepia(21%)
+                            saturate(30%)
+                            hue-rotate(50deg)
+                            brightness(98%)
+                            contrast(97%);
+                    padding-right: 10px;
+                    transform: translate(0, 5px);
+                }
+
+                li {
+                    justify-content: flex-start;
+                    padding: 5px 10px;
+
+                    a {
+                        color: var(--mediumText);
+                        text-decoration: none;
+
+                    }
+
+                    &:hover {
+                        background-color: var(--lightGray01);
+                        border-radius: 5px;
+
+                        a {
+                            color: #000;
+                        }
+
+                        img {
+                            filter: invert(16%)
+                                    sepia(0%)
+                                    saturate(1316%)
+                                    hue-rotate(221deg)
+                                    brightness(105%)
+                                    contrast(95%);
+                        }
+                    }
+    }
+}
+        }
+    }
+}
+
+/* Intranet Button Section */
+.intranet {
+    width: 250px;
+    @include elem-flex( center, center );
+
+    .btn-intranet {
+        color: var(--blue);
+        background-color: #fff;
+        padding: 5px 30px;
+        border-radius: 50px;
+        font-family: Anek Devanagari;
+        font-weight: bold;
+        @include elem-flex( center );
+
+        &::after {
+            content: "Intranet";
+            align-self: center;
+            transform: translate(0, 2.5px);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .icon_img {
+        height: 25px;
+        padding-right: 10px;
+        align-self: center;
+        filter: invert(57%)
+                sepia(77%)
+                saturate(4675%)
+                hue-rotate(202deg)
+                brightness(99%)
+                contrast(93%);
+    }
+}

@@ -1,0 +1,14 @@
+@import 'src/index.scss';
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+/* componentes */
+.home-s1, .home-s2 {
+    scroll-snap-align: start;
+}
+
+.home-s1 {
+    height: 100vh;
+}

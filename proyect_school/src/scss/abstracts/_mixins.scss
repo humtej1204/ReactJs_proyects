@@ -1,0 +1,12 @@
+@mixin elem-size($w : 100%, $h : 100%) {
+    width: $w;
+    height: $h;
+}
+
+@mixin elem-flex($jc:flex-start, $ai:stretch, $ac:normal) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    align-content: $ac;
+}
+

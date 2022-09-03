@@ -8,14 +8,14 @@ import logoFb from '../imgs/components/fb.png'
 import logoIg from '../imgs/components/ig.png'
 
 /* StyleSheet */
-import './footer.css'
+import './footer.scss'
 
 export function Footer() {
   return (
     <div className="footer">
       <div className="main-section">
         <div className="logo-sect">
-          <img src={logo} />
+          <img src={logo} alt="" />
         </div>
 
         <div className="info-sect">

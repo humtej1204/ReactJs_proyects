@@ -12,7 +12,7 @@ import sub_nav_icon05 from '../imgs/components/formulario.svg'
 import sub_nav_icon06 from '../imgs/components/calendario.svg'
 
 /* StyleSheet */
-import './header.css'
+import './header.scss'
 
 export function Header() {
   return (
@@ -63,16 +63,22 @@ export function Header() {
               >Nosotros</NavLink>
               <ul className="sub-nav">
                 <li>
-                  <img src={sub_nav_icon01} alt="" />
-                  <NavLink to="/">¿Quienes somos?</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon01} alt="" />
+                    ¿Quienes somos?
+                  </NavLink>
                 </li>
                 <li>
-                  <img src={sub_nav_icon02} alt="" />
-                  <NavLink to="/">Datos de la Institución</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon02} alt="" />
+                    Datos de la Institución
+                  </NavLink>
                 </li>
                 <li>
-                  <img src={sub_nav_icon03} alt="" />
-                  <NavLink to="/">Misión y Visión</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon03} alt="" />
+                    Misión y Visión
+                  </NavLink>
                 </li>
               </ul>
             </li>
@@ -83,16 +89,22 @@ export function Header() {
               >Institución</NavLink>
               <ul className="sub-nav">
                 <li>
-                  <img src={sub_nav_icon04} alt="" />
-                  <NavLink to="/">Infraestructura</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon04} alt="" />
+                    Infraestructura
+                  </NavLink>
                 </li>
                 <li>
-                  <img src={sub_nav_icon05} alt="" />
-                  <NavLink to="/">Noticias</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon05} alt="" />
+                    Noticias
+                  </NavLink>
                 </li>
                 <li>
-                  <img src={sub_nav_icon06} alt="" />
-                  <NavLink to="/">Eventos</NavLink>
+                  <NavLink to="/">
+                    <img src={sub_nav_icon06} alt="" />
+                    Eventos
+                  </NavLink>
                 </li>
               </ul>
             </li>
@@ -107,7 +119,7 @@ export function Header() {
 
         <div className="intranet">
           <NavLink to="/" className="btn-intranet">
-            <img src={intranet_icon} className="icon_img" />
+            <img src={intranet_icon} className="icon_img" alt="" />
           </NavLink>
         </div>
       </div>
