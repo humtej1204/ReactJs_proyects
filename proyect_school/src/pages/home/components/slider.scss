@@ -1,96 +1,147 @@
 @import 'src/index.scss';
 
-.carruselContent {
-    @include elem-size( 100% , calc(100% - 80px) );
-    background-color: var(--lightGray02);
-    position: relative;
-    overflow: hidden;
+body {
+    &::-webkit-scrollbar {
+        width: 5px;
 
-    .goLeft, .goRight {
-        @include elem-size( 50px, 50px );
-        background-color: var(--yellow);
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        transition-duration: 0.3s;
-
-        &:hover {
-            background-color: var(--blue);
-            box-shadow: 0 0 5px 2px var(--lightGray02);
-            transform: scale(1.2);
+        &:hover{
+            width: 12px;
         }
-
-        &:active {
-            transition-duration: 0.2s;
-            transform: scale(0.8);
-            background-color: #1259CF;
+        
+        &:horizontal {
+            display: none;
         }
     }
 
-    .goLeft {
-        left: 50px;
+    &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 5px;
     }
-
-    .goRight {
-        right: 50px;
-    }
-
-    .carrusel {
-        width: 100%;
-        height: 100%;
-        white-space: nowrap;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        scroll-snap-type: x mandatory;
-
-        &>div {
-            display: inline-flex;
-            flex-direction: row;
-            width: auto;
-            height: 100%;
-    
-            .imgCarrusel {
-                scroll-snap-align: start;
-                background-image: url('../../../imgs/home/banner01.jpg');
-                @include elem-size( 99.14vw );
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        }
-    }
-
 }
 
-.carruselPagination {
-    @include elem-size( 500px, 50px );
+.carousel {
+    @include elem-size( 100%, calc(100vh - 80px) );
+    overflow: hidden;
+    position: relative;
+
+    .carousel-inner {
+      white-space: nowrap;
+      transition: ease 1s;
+      @include elem-size();
+    }
+}
+  
+  
+.carousel-item {
+    display: inline-block;
+    @include elem-size();
+    
+    .overlay {
+        @include elem-size();
+        @include elem-flex(center, center, center);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        background-color: #000;
+        transition: 0.7s ease;
+        flex-direction: column;
+
+        .overlay-title {
+            @include elem-size(50vw, auto);
+            font-size: 10vh;
+            color: white;
+            margin-bottom: 3vh;
+            text-align: center;
+            white-space: normal;
+        }
+
+        .overlay-text-content {
+            @include elem-size(50vw, auto);
+            color: white;
+            font-size: 2vh;
+            white-space: normal;
+        }
+    }
+
+    &:hover {
+        .overlay {
+            opacity: 0.75;
+        }
+    }
+
+    img {
+        @include elem-size( 100%, 100% );
+        object-fit: cover;
+    }
+}
+
+.carousel-control {
+    background-color: #000;
+    opacity: 0.30;
+    border: none;
+    border-radius: 100%;
+    display: inline-block;
     position: absolute;
-    z-index: 10;
-    left: 0;
-    right: 0;
+    height: 50px;
+    width: 50px;
     margin: auto;
-    bottom: 50px;
-    @include elem-flex( center, center );
+    top: 0;
+    bottom: 0;
+    color: #f3f3f3;
+    transition: ease 0.5s;
+    cursor: pointer;
 
-    .cpDot {
-        @include elem-size( 25px, 25px );
-        margin: auto 10px;
-        background-color: #fff;
+    &:hover {
+        transform: scale(1.2);
+        opacity: 0.75;
+    }
+
+    img {
+        @include elem-size(30px);
+        filter: invert(99%)
+                sepia(2%)
+                saturate(2671%)
+                hue-rotate(253deg)
+                brightness(117%)
+                contrast(100%);
+    }
+}
+
+.left {
+    left: 3%;
+
+    img {
+        transform: translateX(-3px);
+    }
+}
+
+.right {
+    right: 3%;
+
+    img {
+        transform: translateX(3px);
+    }
+}
+
+.carousel-indicators {
+    position: relative;
+    bottom: 8%;
+    z-index: 2;
+    @include elem-flex(center, center);
+    
+    .carousel-indicator-item {
+        width: 2vh;
+        height: 2vh;
+        border: 0;
         border-radius: 100%;
-        border: 1px var(--blue) solid;
-        transition-duration: 0.5s;
-
-        &:hover {
-            background-color: var(--blue);
-            box-shadow: 0 0 5px 2px var(--lightGray02);
-        }
-
-        &:active {
-            transition-duration: 0.2s;
-            transform: scale(0.8);
-            background-color: #1259CF;
-        }
+        background: #fff;
+        opacity: 0.5;
+        cursor: pointer;
+        margin: auto 1vh;
+    }
+    
+    .active {
+        opacity: 1;
     }
 }

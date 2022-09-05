@@ -2,6 +2,8 @@
 
 html {
     scroll-snap-type: y mandatory;
+    transition: ease 3s;
+    scroll-behavior: smooth;
 }
 
 /* componentes */

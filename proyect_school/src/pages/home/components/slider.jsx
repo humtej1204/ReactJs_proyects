@@ -1,32 +1,79 @@
-import React, { Fragment } from "react";
+import React, {
+    useState,
+    useEffect,
+    useRef
+} from "react";
+
+/* Components */
+import { CarouselItem } from "./CarouselItem";
+import { CarouselControls } from "./CarouselControls";
+import { CarouselIndicators } from "./CarouselIndicators";
 
 /* Styles */
 import './slider.scss'
 
-export function Slider() {
+
+export function Slider({ slides, interval = 3000, controls = false, indicators = false, autoPlay = true }) {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slideInterval = useRef();
+
+    const switchIndex = (index) => {
+        startSlideTimer()
+        setCurrentSlide(index)
+    };
+
+    const startSlideTimer = () => {
+        if (autoPlay) {
+            stopSlideTimer();
+            slideInterval.current = setInterval(() => {
+                setCurrentSlide(currentSlide => currentSlide < slides.length - 1 ? currentSlide + 1 : 0)
+            }, interval)
+        }
+    }
+
+    const stopSlideTimer = () => {
+      if (autoPlay && slideInterval.current) {
+        clearInterval(slideInterval.current)
+      }
+    }
+
+    useEffect(() => {
+        startSlideTimer()
+
+        return () => stopSlideTimer()
+    })
+
+    const prev = () => {
+        startSlideTimer();
+        const index = currentSlide > 0 ? currentSlide - 1 : slides.length - 1;
+        setCurrentSlide(index);
+    }
+      
+    const next = () => {
+        startSlideTimer();
+        const index = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
+        setCurrentSlide(index);
+    }
+
     return (
-        <Fragment>
-            <div className="carruselContent">
-                <div className="carrusel">
-                    <div>
-                        <div className="imgCarrusel"></div>
-                        <div className="imgCarrusel"></div>
-                        <div className="imgCarrusel"></div>
-                        <div className="imgCarrusel"></div>
-                        <div className="imgCarrusel"></div>
-                    </div>
-                </div>
-                <div className="goLeft"></div>
-                <div className="goRight"></div>
-                
-                <div className="carruselPagination">
-                    <button className="cpDot"></button>
-                    <button className="cpDot"></button>
-                    <button className="cpDot"></button>
-                    <button className="cpDot"></button>
-                    <button className="cpDot"></button>
-                </div>
+        <div className='carousel'>
+            <div 
+                className="carousel-inner"
+                style={{ transform: `translateX(${-currentSlide * 100}%)`}}
+            >
+                {slides.map((item, index) => (
+                    <CarouselItem 
+                        slide={item.img}
+                        title={item.title}
+                        description={item.description}
+                        key={index} 
+                        stopSlide={stopSlideTimer}
+                        startSlide={startSlideTimer}
+                    />
+                ))}
             </div>
-        </Fragment>
+            {indicators && <CarouselIndicators slides={slides} currentIndex={currentSlide} switchIndex={switchIndex} />}
+            {controls && <CarouselControls prev={prev} next={next} />}
+        </div>
     );
 }
