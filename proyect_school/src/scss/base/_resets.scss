@@ -20,3 +20,24 @@ li {
 .header-sep {
     height: 80px;
 }
+
+body {
+    font-family: Inter;
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+
+        &:hover{
+            width: 12px;
+        }
+        
+        &:horizontal {
+            display: none;
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 5px;
+    }
+}

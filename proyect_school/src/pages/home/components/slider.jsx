@@ -5,9 +5,9 @@ import React, {
 } from "react";
 
 /* Components */
-import { CarouselItem } from "./CarouselItem";
-import { CarouselControls } from "./CarouselControls";
-import { CarouselIndicators } from "./CarouselIndicators";
+import { CarouselItem } from "./slider-components/CarouselItem";
+import { CarouselControls } from "./slider-components/CarouselControls";
+import { CarouselIndicators } from "./slider-components/CarouselIndicators";
 
 /* Styles */
 import './slider.scss'

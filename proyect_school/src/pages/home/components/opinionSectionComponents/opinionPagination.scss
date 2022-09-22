@@ -1,0 +1,52 @@
+@import 'src/index.scss';
+
+.pagination {
+    @include elem-size ( 100%, 10% );
+    @include elem-flex( center, center );
+
+    &>button, &>div, &>input {
+        @include elem-size ( 5vh, 5vh );
+        max-width: 40px;
+        max-height: 40px;
+        color: #fff;
+        font-size: 2vh;
+        font-weight: 600;
+        border: 0;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 2vh;
+        @include elem-flex( center, center, center );
+    }
+    
+    &>button {
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            color: #303030;
+            background-color: #ffffff;
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        &>i::before {
+            display: flex;
+        }
+    }
+
+    &>div {
+        margin: 0 0.75vh;
+        display: flex;
+    }
+
+    &>input {
+        color: #454545;
+        margin: 0 0.75vh;
+        font-size: 1.75vh;
+        border-bottom: #303030;
+    }
+}

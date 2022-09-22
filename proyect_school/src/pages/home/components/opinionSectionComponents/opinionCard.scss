@@ -1,0 +1,71 @@
+@import 'src/index.scss';
+
+.card {
+    @include elem-size ( 30vh, 50vh );
+    max-width: 300px;
+    max-height: 500px;
+    min-width: 240px;
+    min-height: 400px;
+    transition: all 0.5s;
+
+    background-color: #dddddd;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    &>img {
+        @include elem-size ( 100%, 40% );
+        object-fit: cover;
+        transition: 0.5s;
+        position: relative;
+        z-index: 2;
+    }
+
+    &>.card-content {
+        @include elem-size ( 100%, 60% );
+        background-color: #FFFFFF;
+        font-family: 'Inter';
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5vh 3vh;
+        position: relative;
+        z-index: 10;
+
+        &>h3 {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 0.75vh;
+            margin-bottom: 1vh;
+            color: #606060;
+        }
+
+        &>h1 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 1.75vh;
+            color: #303030;
+        }
+
+        &>p {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 1.8vh;
+            color: #000000;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        &>img {
+            transform: scale(1.2);
+            z-index: 2;
+        }
+    }
+}

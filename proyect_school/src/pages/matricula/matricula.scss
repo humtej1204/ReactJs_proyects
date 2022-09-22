@@ -1,0 +1,10 @@
+@import 'src/index.scss';
+
+.matricula-s1, .matricula-s2 {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.matricula-s1 {
+    height: 100vh;
+}

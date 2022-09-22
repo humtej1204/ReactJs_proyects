@@ -1,24 +1,5 @@
 @import 'src/index.scss';
 
-body {
-    &::-webkit-scrollbar {
-        width: 5px;
-
-        &:hover{
-            width: 12px;
-        }
-        
-        &:horizontal {
-            display: none;
-        }
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #999;
-        border-radius: 5px;
-    }
-}
-
 .carousel {
     @include elem-size( 100%, calc(100vh - 80px) );
     overflow: hidden;
