@@ -6,6 +6,7 @@ nav.header {
     align-items: center;
     flex-direction: column;
     position: fixed;
+    border-right: #ccc 2px solid;
     
     hr {
         width: 8vh;
@@ -64,7 +65,6 @@ nav.header {
 }
 
 div.header-separator {
-    background-color: aqua;
     height: auto;
     width: 120px;
 }
