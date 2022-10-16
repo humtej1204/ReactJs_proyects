@@ -1,0 +1,33 @@
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .form-select {
+        width: 160px;
+        margin-right: 20px;
+    }
+
+    form {
+        width: 400px;
+    }
+}
+
+.caption {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #666;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    border-radius: 25px 25px 0 0;
+    border: solid 0.1px #dfe0e1;
+    border-bottom: 0;
+}
+
+.component-content {
+    margin: 20px 0;
+}
