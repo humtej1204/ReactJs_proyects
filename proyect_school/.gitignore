@@ -1,6 +1,6 @@
 # Dependencias
-/node_modules
+node_modules/
 
 # Archivos generados de construcción
-/build
-/dist
+build/
+dist/
