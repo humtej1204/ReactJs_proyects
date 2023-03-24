@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 
 /* Components */
-import { OpinionCard } from './opinionSectionComponents/opinionCard';
-import { OpinionPagination } from './opinionSectionComponents/opinionPagination';
+import { OpinionCard } from './opinion-components/opinionCard';
+import { OpinionPagination } from './opinion-components/opinionPagination';
 
 /* Styles */
 import './opinionComponent.scss';
@@ -20,7 +20,9 @@ export function OpinionComponent({ opinions }) {
 
     useEffect(() => {
         function handleWindowResize() {
-            setWidthCont(refCont.current.offsetWidth);
+            if (refCont.current.offsetWidth <= 1440)
+                setWidthCont(refCont.current.offsetWidth);
+            else setWidthCont(1440);
             setElemPerPage(parseInt(widthCont / 275));
         }
 
@@ -34,30 +36,25 @@ export function OpinionComponent({ opinions }) {
     });
 
     return (
-        <div className="opinionSection">
-            <div className="container">
-                <h3>ASI OPINAN NUESTROS ALUMNOS Y GRADUADOS</h3>
-                <div className="cards-container">
-                    <div className="cards" ref={refCont}>
-                        {opinions
-                        .slice((page - 1) * elemPerPage, (page - 1) * elemPerPage + elemPerPage)
-                        .map((item, index) => (
-                            <OpinionCard
-                                imagen={item.img}
-                                personLvl={item.personLvl}
-                                title={item.title}
-                                description={item.description}
-                                key={index}
-                            />
-                        ))}
-                    </div>
-                    <OpinionPagination
-                        page={page}
-                        setPage={setPage}
-                        max={max}
+        <section className="cards-container">
+            <div className="cards" ref={refCont}>
+                {opinions
+                .slice((page - 1) * elemPerPage, (page - 1) * elemPerPage + elemPerPage)
+                .map((item, index) => (
+                    <OpinionCard
+                        imagen={item.img}
+                        personLvl={item.personLvl}
+                        title={item.title}
+                        description={item.description}
+                        key={index}
                     />
-                </div>
+                ))}
             </div>
-        </div>
+            <OpinionPagination
+                page={page}
+                setPage={setPage}
+                max={max}
+            />
+        </section>
     );
 }

@@ -1,0 +1,25 @@
+@import 'src/index.scss';
+
+.fadeSlider {
+    @include elem-size( 100%, 100% );
+    position: relative;
+    z-index: 5;
+
+    img {
+        position: absolute;
+        z-index: 10;
+        @include elem-size( 120%, 100% );
+        object-fit: cover;
+    }
+}
+
+.fadeFrame {
+    animation: fadeFrame 10s ease-in-out infinite;
+}
+
+@keyframes fadeFrame {
+    0% {transform: translate(0, 0); opacity: 0;}
+    20% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {transform: translate(-15%, 0); opacity: 0;}
+}

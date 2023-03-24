@@ -1,10 +1,165 @@
 @import 'src/index.scss';
 
-.matricula-s1, .matricula-s2 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+// main#matricula {
+// }
+
+.banner-form {
+    @include elem-size( 100%, calc(100vh - 80px) );
+    display: flex;
+    position: relative;
+    z-index: 1;
 }
 
-.matricula-s1 {
-    height: 100vh;
+.offeredEducation {
+    display: flex;
+
+    .left-side, .right-side {
+        width: 50%;
+    }
+
+    .left-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../imgs/matricula/education_proposal_bg.png);
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-position: center;
+        background-size: cover;
+
+        img {
+            width: 75%;
+            aspect-ratio: 4/3;
+        }
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 75px 50px;
+
+        h1 {
+            width: fit-content;
+            font-size: 2.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding-bottom: 0.8rem;
+            border-bottom: 0.2rem solid #666;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.morePropEdu {
+    padding: 50px 0;
+    background-color: var(--yellow);
+    @include elem-flex( center, center);
+    flex-direction: column;
+    gap: 40px;
+    color: white;
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .proposal-list {
+        @include elem-flex();
+        justify-content: center;
+        gap: 4rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            i {
+                font-size: 2rem;
+                display: flex;
+            }
+        }
+    }
+
+    .btn-see_more {
+        width: 250px;
+        gap: 1.5rem;
+        transition-duration: 0.75s;
+
+        &:hover {
+            &>i {
+                animation-name: arrow-move;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        @keyframes arrow-move {
+            0% {transform: translateX(0.5rem);}
+            50% {transform: translateX(-0.5rem);}
+            100% {transform: translateX(0.5rem);}
+        }
+    }
+}
+
+.btn-see_more {
+    @include btn-002(var(--red), true);
+}
+
+.moreAbout {
+    @include elem-flex(center, center);
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 2rem;
+
+    h1 {
+        font-size: 2rem;
+        color: #666;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .containerItems {
+        @include elem-flex(center);
+        gap: 1.5rem;
+    }
+}
+
+.card-ofered {
+    width: 300px;
+    @include elem-flex(center, center);
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    transition-duration: 1s;
+    padding: 25px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+
+    .img-frame {
+        width: 150px;
+        @include elem-flex(center, center);
+        aspect-ratio: 1;
+        border-radius: 100%;
+        background-color: aliceblue;
+        overflow: hidden;
+
+        img {
+            height: 150px;
+            object-fit: contain;
+        }
+    }
+
+    h2 {
+        color: #333;
+        font-size: 1.2rem;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.50);
+    }
 }

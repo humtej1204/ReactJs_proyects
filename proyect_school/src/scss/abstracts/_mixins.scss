@@ -10,3 +10,48 @@
     align-content: $ac;
 }
 
+@mixin btn-001($fstcolor, $sndcolor: #fff) {
+    font-size: 1.1rem;
+    color: $fstcolor;
+    width: 340px;
+    padding: 15px 0;
+    box-sizing: content-box;
+    border: 3px solid $fstcolor;
+    border-radius: 25px;
+    text-align: center;
+    align-self: end;
+    transition: all 0.4s;
+    background-image: linear-gradient(to left, transparent 50%, $fstcolor 50%);
+    background-size: 200%;
+    background-position: 100%;
+
+    &:hover {
+        color: $sndcolor;
+        background-position: 0%;
+    }
+
+    &:active {
+        transform: scale(0.9)
+    }
+}
+
+@mixin btn-002($color, $hover: false) {
+    @include elem-flex(center, center);
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    background-color: $color;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #fff;
+
+    i {
+        font-size: 1.25rem;
+        display: flex;
+    }
+
+    @if $hover {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

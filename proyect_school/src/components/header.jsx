@@ -16,15 +16,11 @@ import './header.scss'
 
 export function Header() {
   return (
-    <div className="header">
-
+    <header>
       <div className="logo">
-
-        <div className="logo-img">
-          <NavLink to="/">
-            <img src={logo} alt="Alfredo Rebaza Acosta Logo" width="40px" />
-          </NavLink>
-        </div>
+        <NavLink to="/">
+          <img src={logo} alt="Alfredo Rebaza Acosta Logo" width="40px" />
+        </NavLink>
 
         <div className="logo-text">
           <font color="#4285F4">ALFR</font>
@@ -35,95 +31,86 @@ export function Header() {
           <font color="#4285F4">ACO</font>
           <font color="#34A853">STA</font>
         </div>
-
       </div>
+      
+      <nav>
+        <ul className="main-links">
+          <li>
+            <NavLink
+              to="/"
+              className={({isActive}) => (isActive ? "onIt" : "")}
+            >Inicio</NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/matricula"
+              className={({isActive}) => (isActive ? "onIt" : "")}
+            >Matrícula</NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/nosotros"
+              className={({isActive}) => (isActive ? "onIt" : "")}
+            >Nosotros</NavLink>
+            <ul className="sub-nav">
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon01} alt="" />
+                  ¿Quienes somos?
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon02} alt="" />
+                  Datos de la Institución
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon03} alt="" />
+                  Misión y Visión
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <NavLink
+            to="/institucion"
+              className={({isActive}) => (isActive ? "onIt" : "")}
+            >Institución</NavLink>
+            <ul className="sub-nav">
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon04} alt="" />
+                  Infraestructura
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon05} alt="" />
+                  Noticias
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/">
+                  <img src={sub_nav_icon06} alt="" />
+                  Eventos
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <NavLink
+              to="/contactanos"
+              className={({isActive}) => (isActive ? "onIt" : "")}
+            >Contáctanos</NavLink>
+          </li>
+        </ul>
 
-
-
-      <div className="nav">
-
-        <div className="nav-links">
-          <ul className="main-links">
-            <li>
-              <NavLink
-                to="/"
-                className={({isActive}) => (isActive ? "onIt" : "")}
-              >Inicio</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/matricula"
-                className={({isActive}) => (isActive ? "onIt" : "")}
-              >Matrícula</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/nosotros"
-                className={({isActive}) => (isActive ? "onIt" : "")}
-              >Nosotros</NavLink>
-              <ul className="sub-nav">
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon01} alt="" />
-                    ¿Quienes somos?
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon02} alt="" />
-                    Datos de la Institución
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon03} alt="" />
-                    Misión y Visión
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <NavLink
-              to="/institucion"
-                className={({isActive}) => (isActive ? "onIt" : "")}
-              >Institución</NavLink>
-              <ul className="sub-nav">
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon04} alt="" />
-                    Infraestructura
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon05} alt="" />
-                    Noticias
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">
-                    <img src={sub_nav_icon06} alt="" />
-                    Eventos
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <NavLink
-                to="/contactanos"
-                className={({isActive}) => (isActive ? "onIt" : "")}
-              >Contáctanos</NavLink>
-            </li>
-          </ul>
-        </div>
-
-        <div className="intranet">
-          <NavLink to="/" className="btn-intranet">
-            <img src={intranet_icon} className="icon_img" alt="" />
-          </NavLink>
-        </div>
-      </div>
-
-    </div>
+        <NavLink to="/" className="btn-intranet">
+          <img src={intranet_icon} className="icon_img" alt="" />
+        </NavLink>
+      </nav>
+    </header>
   );
 };

@@ -20,6 +20,7 @@
     .overlay {
         @include elem-size();
         @include elem-flex(center, center, center);
+        gap: 2rem;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -30,9 +31,8 @@
 
         .overlay-title {
             @include elem-size(50vw, auto);
-            font-size: 10vh;
+            font-size: 5rem;
             color: white;
-            margin-bottom: 3vh;
             text-align: center;
             white-space: normal;
         }
@@ -40,7 +40,7 @@
         .overlay-text-content {
             @include elem-size(50vw, auto);
             color: white;
-            font-size: 2vh;
+            font-size: 1rem;
             white-space: normal;
         }
     }
