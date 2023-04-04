@@ -1,0 +1,26 @@
+# Dependencias
+/node_modules
+
+# Archivos de construcción
+/build
+/out
+/.next
+
+# Archivos de caché
+/.cache
+/yarn-error.log
+/.npm
+
+# Archivos de registro
+*.log
+
+# Otras exclusiones
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencias de desarrollo
+/.pnp
+.pnp.js
