@@ -1,4 +1,5 @@
 import { Carousel } from './components/carousel/Carousel'
+import { Swipper } from './components/swipper/Swipper'
 
 export function App() {
   const slides = [
@@ -11,11 +12,12 @@ export function App() {
   
   return (
     <div className="container">
-      <Carousel 
+      {/* <Carousel 
         slides={slides} 
         interval={5000} 
         controls={true} 
-        indicators={true} />
+        indicators={true} /> */}
+        <Swipper />
     </div>
   )
 }

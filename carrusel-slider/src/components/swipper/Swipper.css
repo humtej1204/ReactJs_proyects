@@ -1,0 +1,22 @@
+.swipper-content {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.swipper-inner {
+  white-space: nowrap;
+  transition: ease 1s;
+}
+
+.swipper-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
