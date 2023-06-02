@@ -1,0 +1,55 @@
+.item-section {
+    h1 {
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url('../../../imgs/institucion/decorator.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(-7.5%, -12%);
+        }
+
+        span {
+            width: max-content;
+            max-width: 375px;
+        }
+
+        &::after {
+            content: url('../../../imgs/institucion/decorator.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(7.5%, -12%) rotateY(180deg);
+        }
+    }
+
+    p {
+        margin: 0 0 3rem 0;
+    }
+
+    button {
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 0.75rem;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+        transition-duration: 0.5s;
+
+        &:hover {
+            width: 225px;
+            font-size: 1.1rem;
+            background-color: white;
+            color: #555;
+        }
+    }
+}

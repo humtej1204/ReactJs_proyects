@@ -23,9 +23,9 @@ function OferedItem({img, tittle, description}) {
       <h2>{tittle}</h2>
       <p>{description}</p>
       
-      <a href="" className="btn-see_more">
+      <a href="/home" className="btn-see_more">
         Ver mas
-        <i class="fi fi-rr-arrow-right"></i>
+        <i className="fi fi-rr-arrow-right"></i>
       </a>
     </div>
   );
@@ -70,33 +70,33 @@ export function Matricula() {
             <h1>¿Quieres conocer más sobre nuestra propuesta educativa?</h1>
             <ul className="proposal-list">
               <li>
-                <i class="fi fi-rr-chart-histogram"></i>
+                <i className="fi fi-rr-chart-histogram"></i>
                 <span>
                   Docentes<br />Capacitados
                 </span>
               </li>
               <li>
-                <i class="fi fi-rr-list-check"></i>
+                <i className="fi fi-rr-list-check"></i>
                 <span>
                   Seguimiento<br />Academico
                 </span>
               </li>
               <li>
-                <i class="fi fi-rr-users"></i>
+                <i className="fi fi-rr-users"></i>
                 <span>
                   Escuela para<br />padres
                 </span>
               </li>
               <li>
-                <i class="fi fi-rr-globe"></i>
+                <i className="fi fi-rr-globe"></i>
                 <span>
                   Plataforma<br />Educativa
                 </span>
               </li>
             </ul>
-            <a href="" className="btn-see_more">
+            <a href="/home" className="btn-see_more">
               Más Información
-              <i class="fi fi-rr-arrow-right"></i>
+              <i className="fi fi-rr-arrow-right"></i>
             </a>
           </article>
 

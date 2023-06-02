@@ -3,16 +3,13 @@ import { NavLink } from "react-router-dom";
 
 /* Images */
 import logo from '../imgs/components/logo_school.png'
-import logoWsp from '../imgs/components/wsp.png'
-import logoFb from '../imgs/components/fb.png'
-import logoIg from '../imgs/components/ig.png'
 
 /* StyleSheet */
 import './footer.scss'
 
 export function Footer() {
   return (
-    <footer>
+    <footer id="main-footer">
       <section>
         <div className="section-content main-section">
           <div className="info-sect">
@@ -119,17 +116,17 @@ export function Footer() {
           <ul className="social-icons">
             <li>
               <a href="https://www.facebook.com/iealfredorebazacostaoficial" target="_blank">
-                <i class="fi fi-brands-facebook"></i>
+                <i className="fi fi-brands-facebook"></i>
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/" target="_blank">
-                <i class="fi fi-brands-instagram"></i>
+                <i className="fi fi-brands-instagram"></i>
               </a>
             </li>
             <li>
               <a href="https://api.whatsapp.com/" target="_blank">
-                <i class="fi fi-brands-whatsapp"></i>
+                <i className="fi fi-brands-whatsapp"></i>
               </a>
             </li>
           </ul>

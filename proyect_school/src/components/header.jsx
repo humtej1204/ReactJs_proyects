@@ -16,7 +16,7 @@ import './header.scss'
 
 export function Header() {
   return (
-    <header>
+    <header id="mainLayout_header">
       <div className="logo">
         <NavLink to="/">
           <img src={logo} alt="Alfredo Rebaza Acosta Logo" width="40px" />

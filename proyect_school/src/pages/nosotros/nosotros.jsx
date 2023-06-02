@@ -1,7 +1,9 @@
 import React from "react";
+import './nosotros.scss';
 
 export function Nosotros() {
   return (
-    <div>Nosotros</div>
+    <section id="nosotros-sect">
+    </section>
   );
 }

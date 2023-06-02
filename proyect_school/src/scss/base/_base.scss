@@ -1,13 +1,10 @@
-.content-main {
-
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
 }
+
 
 @media screen and (min-width: 1440px) {
     .content-main {
@@ -45,4 +42,9 @@ main {
         background-position: calc(100% - 0.75rem) 50%;
     }
 
+}
+
+.full-window {
+    width: 100vw;
+    height: calc(100vh - 80px);
 }

@@ -1,3 +1,35 @@
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1440px,
+  "4xl": 1920px,
+  "2k": 2048px,
+);
+
+/*
+  $property: Nombre de la Propiedad CSS que se desea usar
+  $values: Variable tipo Mapa ($key: $value) donde
+    $key es el $key de la constante $breakpoints y
+    $value es el valor que tomara $property segun cada valor dentro de $breakpoints
+*/
+@mixin responsive($property, $values) {
+  @if length($values) > 0 {
+    @for $i from 1 through length($values) {
+      $breakpoint: nth($values, $i);
+      $breakpoint-name: nth($breakpoint, 1);
+      $breakpoint-value: nth($breakpoint, 2);
+  
+      @if not ($breakpoint == null or $breakpoint-name == null or $breakpoint-value == null) {
+        @media (min-width: map-get($breakpoints, $breakpoint-name)) {
+          #{$property}: $breakpoint-value;
+        }
+      }
+    }
+  }
+}
+
 @mixin elem-size($w : 100%, $h : 100%) {
     width: $w;
     height: $h;

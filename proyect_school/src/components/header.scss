@@ -1,6 +1,6 @@
 @import 'src/index.scss';
 
-header {
+#mainLayout_header {
     @include elem-flex( space-between );
     @include elem-size( 100%, 80px );
     background-color: var(--blue);
@@ -121,10 +121,13 @@ nav {
 
 /* Intranet Button Section */
 .btn-intranet {
+    @include responsive(width, (xl: 175px));
+    @include responsive(padding, (xl: 5px 30px));
+    padding: 10px;
+    @include responsive(border-radius, (xl: 50px));
+    border-radius: 100%;
     color: var(--blue);
     background-color: #fff;
-    padding: 10px;
-    border-radius: 100%;
     font-family: 'Anek Devanagari';
     font-weight: bold;
     @include elem-flex( center );
@@ -133,7 +136,14 @@ nav {
         transform: scale(1.1);
     }
 
+    &::after {
+        @include responsive(content, (xl: "Intranet"));
+        @include responsive(align-self, (xl: center));
+        @include responsive(transform, (xl: translate(0, 2.5px)));
+    }
+
     .icon_img {
+        @include responsive(padding-right, (xl: 10px));
         height: 25px;
         align-self: center;
         filter: invert(57%)
@@ -142,23 +152,5 @@ nav {
                 hue-rotate(202deg)
                 brightness(99%)
                 contrast(93%);
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    header .btn-intranet {
-        width: 175px;
-        border-radius: 50px;
-        padding: 5px 30px;
-
-        &::after {
-            content: "Intranet";
-            align-self: center;
-            transform: translate(0, 2.5px);
-        }
-
-        .icon_img {
-            padding-right: 10px;
-        }
     }
 }

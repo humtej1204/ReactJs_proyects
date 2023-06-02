@@ -6,10 +6,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { AppContextProvider } from './contexts/ContextProvider';
 
 /* Components */
 import { Header } from './components/header'
 import { Footer } from "./components/footer";
+import { Overlay } from "./components/overlay/Overlay";
 
 /* Pages Views */
 import { Home } from "./pages/home/home";
@@ -22,23 +24,25 @@ import { NotFoundPage } from "./pages/errorPages/notFound"
 export function App() {
   return (
     <Fragment>
-      <BrowserRouter>
-
-        <Header />
+      <AppContextProvider>
+        <Overlay></Overlay>
         
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="/matricula" element={<Matricula />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/institucion" element={<Institucion />} />
-          <Route path="/contactanos" element={<Contactanos />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <BrowserRouter>
+          <Header />
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Navigate to="/" />} />
+            <Route path="/matricula" element={<Matricula />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/institucion" element={<Institucion />} />
+            <Route path="/contactanos" element={<Contactanos />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
 
-        <Footer />
-
-      </BrowserRouter>
+          <Footer />
+        </BrowserRouter>
+      </AppContextProvider>
     </Fragment>
   );
 }

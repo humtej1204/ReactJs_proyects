@@ -1,0 +1,18 @@
+#institution_popUpInfo {
+    min-width: 320px;
+    max-width: 600px;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    padding: 3rem;
+    overflow-y: hidden;
+
+    header {
+        height: 50px;
+    }
+
+    .institution_popUpInfo_content {
+        overflow-y: auto;
+        height: calc(100% - 50px);
+    }
+}
