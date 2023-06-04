@@ -14,7 +14,7 @@ export function SectionNavigator({ tittles, currentIndex, changeIndex }) {
 
   return (
     <div id="institution-navigator"
-    style={(currentIndex === 0)?({opacity: '0'}):({opacity: '1'})}>
+    style={(currentIndex === 0)?({opacity: '0', display: 'none'}):({display: 'flex', opacity: '1'})}>
       <ul>
         <li style={{right: '10px'}}>
           <button onClick={() => handleChangeIndex(0)}>

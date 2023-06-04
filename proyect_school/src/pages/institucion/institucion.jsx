@@ -68,7 +68,7 @@ export function Institucion() {
             <h1>Alfredo Rebaza Acosta</h1>
             <img className="img-separator" src={separator} alt="beautifull-separator" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper ac nisl vel bibendum. Mauris dolor urna, fringilla quis magna in, condimentum dictum arcu. Sed et elit ornare, consequat felis a, rutrum quam. Praesent lacinia lacus at sapien dictum, sed dapibus magna volutpat. Sed lacinia et tellus nec posuere. Nam pellentesque fringilla purus vel condimentum. Cras aliquam sollicitudin orci ut pharetra. Morbi eu leo eget nisi viverra lobortis at in turpis. Mauris arcu risus, scelerisque vitae gravida nec, ultrices ut tortor. Cras eros sem, dignissim nec fringilla eget, elementum eu arcu. Sed placerat rutrum purus sed fringilla. Vestibulum quis neque vitae arcu convallis scelerisque. Maecenas sagittis facilisis nisi sit amet condimentum. Fusce consectetur aliquet posuere. Vivamus quis luctus odio.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper ac nisl vel bibendum. Mauris dolor urna, fringilla quis magna in, condimentum dictum arcu. Sed et elit ornare, consequat felis a, rutrum quam. Praesent lacinia lacus at sapien dictum, sed dapibus magna volutpat. Sed lacinia et tellus nec posuere. Nam pellentesque fringilla purus vel condimentum. Cras aliquam sollicitudin orci ut pharetra. Morbi eu leo eget nisi viverra lobortis at in turpis.
             </p>
           </div>
         </section>
