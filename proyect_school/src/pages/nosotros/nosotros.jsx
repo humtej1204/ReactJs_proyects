@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 /* Styles */
@@ -8,7 +8,22 @@ import './nosotros.scss';
 import IMG01 from '../../imgs/home/IMG01.jpg';
 import whoWeAre from '../../imgs/nosotros/IMG05_3.png';
 
+/* Info */
+import { servicesData } from "./nosotros-info";
+
 export function Nosotros() {
+  const [animate, setAnimate] = useState(false);
+  const [selectData, setSelectData] = useState(servicesData[0]);
+
+  const handleSelectElem = (data) => {
+    setAnimate(false);
+    setSelectData(data);
+    
+    setTimeout(() => {
+      setAnimate(true);
+    }, 1);
+  }
+
   return (
     <main id="nosotros-sect">
       <section id="nosotros-main_sect">
@@ -91,30 +106,36 @@ export function Nosotros() {
         </h1>
 
         <div className="container_selector">
-          <div className="selected_elem">
-            <img src="" alt="" />
+          <div className={`selected_elem ${animate?('fadeLeft'):('')}`}>
+            <img src={selectData.image} alt="" />
             <div className="selected_elem-container">
               <h3>Profesores a cargo:</h3>
               <span>
-                Profesor N1, Profesor N2, Profesor N3, ...
+                {selectData.inCharge}
               </span>
 
-              <h2>Aula de Computación</h2>
+              <h2>{selectData.service}</h2>
               <p>
-                Nam eu magna aliquet est malesuada laoreet in at turpis. Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus. Sed tincidunt turpis odio, quis scelerisque dolor sollicitudin nec.
+                {selectData.description}
               </p>
             </div>
           </div>
 
           <div className="elem-container">
-            <div className="elem">
-              <img src="" alt="" />
-            
-              <h2>Aula de Computación</h2>
-              <p>
-                Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt.
-              </p>
-            </div>
+            {servicesData.map((elem, index) => (
+                <div className={`elem ${(elem.id === selectData.id)?('elem_active'):('')}`}
+                key={"serviceElem_" + index}
+                onClick={() => handleSelectElem(elem)}>
+                  <img src={elem.image} alt="" />
+                
+                  <div className="elem_content">
+                    <h2>{elem.service}</h2>
+                    <p>
+                      {elem.shortDescription}
+                    </p>
+                  </div>
+                </div>
+            ))}
           </div>
         </div>
       </section>
