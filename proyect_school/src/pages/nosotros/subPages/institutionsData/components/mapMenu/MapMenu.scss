@@ -3,14 +3,13 @@
 }
 
 .backdrop {
-    background-color: rgba(black, 0.5);
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
-    filter: blur(10px);
+    background-color: rgba(black, 0.75);
     opacity: 1;
     display: initial;
     transition: all ease-in-out var(--menuAnimation-duration);

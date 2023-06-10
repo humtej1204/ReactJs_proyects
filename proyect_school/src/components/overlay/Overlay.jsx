@@ -1,6 +1,5 @@
 import React, {
-    useState, useCallback,
-    useEffect, useContext,
+    useContext,
 } from "react";
 import { PopUpContext } from '../../contexts/contextos/PopUpContext';
 

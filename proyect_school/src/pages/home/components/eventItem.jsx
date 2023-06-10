@@ -8,7 +8,7 @@ export function EventItem({ img, eventName, description }) {
             <div className='eventContent'>
                 <h3>{eventName}</h3>
                 <p>{description}</p>
-                <a>
+                <a href='#'>
                     <i className="fi fi-sr-chevron-double-down" />
                 </a>
             </div>

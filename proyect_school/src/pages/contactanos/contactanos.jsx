@@ -78,11 +78,11 @@ export function Contactanos() {
         <div className="check-terms">
           <span>
             <input type="checkbox" id="policy" />
-            Acepto las <a>Políticas de Privacidad</a>.
+            Acepto las <a href="#">Políticas de Privacidad</a>.
           </span>
           <span>
             <input type="checkbox" id="terms" />
-            Acepto recibir información útil sobre eventos y programas de la Institucion Educativa Alfredo Rebaza Acosta para <a>finalidades adicionales</a>. Puedo darme de baja en cualquier momento.
+            Acepto recibir información útil sobre eventos y programas de la Institucion Educativa Alfredo Rebaza Acosta para <a href="#">finalidades adicionales</a>. Puedo darme de baja en cualquier momento.
           </span>
         </div>
         
