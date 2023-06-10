@@ -54,19 +54,19 @@ export function Header() {
             >Nosotros</NavLink>
             <ul className="sub-nav">
               <li>
-                <NavLink to="/">
+                <NavLink to="/nosotros">
                   <img src={sub_nav_icon01} alt="" />
                   ¿Quienes somos?
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/">
+                <NavLink to="/datosInstitucionales">
                   <img src={sub_nav_icon02} alt="" />
                   Datos de la Institución
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/">
+                <NavLink to="/misionVision">
                   <img src={sub_nav_icon03} alt="" />
                   Misión y Visión
                 </NavLink>

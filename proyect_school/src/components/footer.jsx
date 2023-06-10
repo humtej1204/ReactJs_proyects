@@ -21,16 +21,13 @@ export function Footer() {
                 <NavLink to="/nosotros" className="title">Nosotros</NavLink>
                 <ul>
                   <li className="sub-title">
-                    <NavLink to="/">¿Quiénes somos?</NavLink>
+                    <NavLink to="/nosotros">¿Quiénes somos?</NavLink>
                   </li>
                   <li className="sub-title">
-                    <NavLink to="/">Programas</NavLink>
+                    <NavLink to="/datosInstitucionales">Datos de la Institución</NavLink>
                   </li>
                   <li className="sub-title">
-                    <NavLink to="/">Datos de la Institución</NavLink>
-                  </li>
-                  <li className="sub-title">
-                    <NavLink to="/">Misión y Visión</NavLink>
+                    <NavLink to="/misionVision">Misión y Visión</NavLink>
                   </li>
                 </ul>
               </li>
@@ -115,17 +112,17 @@ export function Footer() {
         <div className="section-content social-sect">
           <ul className="social-icons">
             <li>
-              <a href="https://www.facebook.com/iealfredorebazacostaoficial" target="_blank">
+              <a href="https://www.facebook.com/iealfredorebazacostaoficial" rel="noreferrer" target="_blank">
                 <i className="fi fi-brands-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
                 <i className="fi fi-brands-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="https://api.whatsapp.com/" target="_blank">
+              <a href="https://api.whatsapp.com/" rel="noreferrer" target="_blank">
                 <i className="fi fi-brands-whatsapp"></i>
               </a>
             </li>
@@ -133,12 +130,12 @@ export function Footer() {
           
           <ul>
             <li>
-              <a href="/" className="sub-title" target="_blank">
+              <a href="/" className="sub-title" rel="noreferrer" target="_blank">
                 Reglamento Interno
               </a>
             </li>
             <li>
-              <a href="/" className="sub-title" target="_blank">
+              <a href="/" className="sub-title" rel="noreferrer" target="_blank">
                 Certificado de Estudios
               </a>
             </li>
@@ -151,22 +148,22 @@ export function Footer() {
           <span>Proyectos de HaruHumtej</span>
           <ul>
             <li>
-              <a href="http://wild-harumon.tech/" target="_blank">
+              <a href="http://wild-harumon.tech/" target="_blank" rel="noreferrer">
                 Huru’s Landing Page
               </a>
             </li>
             <li>
-              <a href="https://github.com/humtej1204" target="_blank">
+              <a href="https://github.com/humtej1204" target="_blank" rel="noreferrer">
                 Github
               </a>
             </li>
             <li>
-              <a href="https://medium.com/@humtej1204" target="_blank">
+              <a href="https://medium.com/@humtej1204" target="_blank" rel="noreferrer">
                 Medium
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/humberto-g-tejada-espinoza-b0155a138/" target="_blank">
+              <a href="https://www.linkedin.com/in/humberto-g-tejada-espinoza-b0155a138/" target="_blank" rel="noreferrer">
                 LinkedIn
               </a>
             </li>

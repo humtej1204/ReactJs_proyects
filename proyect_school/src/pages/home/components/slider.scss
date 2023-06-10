@@ -1,7 +1,7 @@
 @import 'src/index.scss';
 
 .carousel {
-    @include elem-size( 100%, calc(100vh - 80px) );
+    @include elem-size( 100%, calc(100vh - var(--header-height)) );
     overflow: hidden;
     position: relative;
 

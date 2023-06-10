@@ -1,0 +1,227 @@
+* {
+    --menuAnimation-duration: 0.5s;
+}
+
+.backdrop {
+    background-color: rgba(black, 0.5);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    filter: blur(10px);
+    opacity: 1;
+    display: initial;
+    transition: all ease-in-out var(--menuAnimation-duration);
+}
+
+.menuBar {
+    box-sizing: content-box;
+    position: absolute;
+    margin: auto;
+    padding: 5px;
+    top: 0;
+    bottom: 0;
+    right: 50px;
+    width: 50px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: all ease-in-out var(--menuAnimation-duration);
+    z-index: 20;
+
+    &>.menuIcon {
+        width: 30px;
+        height: 30px;
+        aspect-ratio: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(2, 45%);
+        gap: 10%;
+        cursor: pointer;
+        transition: all ease-in-out 0.25s;
+        position: absolute;
+        z-index: 10;
+
+        &:hover {
+            transform: scale(1.1);
+        
+            .iconSection {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    hr {
+        width: 40%;
+        height: 2.5px;
+        background-color: #666;
+        border-radius: 2.5px;
+        transition: all ease-in-out var(--menuAnimation-duration);
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.menuBarRezised {
+    box-sizing: content-box !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50px !important;
+    border: #4285F4 solid 5px !important;
+}
+
+.menuBarDesplegated {
+    right: 350px !important;
+    box-shadow: none !important;
+}
+
+.menuIconActive {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+    .iconSection {
+        border-radius: 100%;
+    }
+}
+
+.menuIcondesactive {
+    animation-name: rotateInverse;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.iconSection {
+    border-radius: 5px;
+    transition: all ease-in-out var(--menuAnimation-duration);
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #555;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    transition: all ease-in-out var(--menuAnimation-duration);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.blue_section {
+    background-color: var(--blue);
+}
+.green_section {
+    background-color: var(--green);
+}
+.yellow_section {
+    background-color: var(--yellow);
+}
+.red_section {
+    background-color: var(--red);
+}
+
+.vanished {
+    opacity: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateInverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+#menuCard {
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -240px;
+    opacity: 0;
+    margin: auto;
+    z-index: 18;
+    transition: all ease-in-out var(--menuAnimation-duration);
+
+    &>.leftDivision {
+        width: 50px;
+        background-color: #4285F4;
+    }
+
+    &>.infoContent {
+        width: calc(100% - 50px);
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        .data_label {
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+
+            .label_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                .tittle_label {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: #333;
+                }
+
+                .value_label {
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    color: #555;
+                }
+            }
+
+            i {
+                width: 40px;
+                height: 40px;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.menuCardDesplegated {
+    right: 65px !important;
+    opacity: 1 !important;
+}
