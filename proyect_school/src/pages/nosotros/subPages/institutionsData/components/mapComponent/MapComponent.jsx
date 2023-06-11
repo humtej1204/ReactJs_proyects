@@ -25,14 +25,15 @@ export function MapComponent() {
         setMap(null)
     }, [])
     
-    return isLoaded ? (
+    return (isLoaded ? (
         <GoogleMap
             mapContainerClassName="map-container"
             center={center}
-            zoom={10}
+            zoom={'18'}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options={{
+                zoom: 18,
                 zoomControl: true,
                 streetViewControl: true,
                 mapTypeControl: false,
@@ -41,7 +42,7 @@ export function MapComponent() {
         >
             <Marker position={markerPosition} />
         </GoogleMap>
-    ) : <></>
+    ) : <></>)
 }
 
 const center = {

@@ -15,8 +15,8 @@ import { sectionData } from "./section-data"
 import './institucion.scss'
 
 /* Images */
-import main_sect from '../../imgs/institucion/main_sect.png'
-import separator from '../../imgs/institucion/separator.png'
+import main_sect from '../../assets/imgs/institucion/main_sect.png'
+import separator from '../../assets/imgs/institucion/separator.png'
 
 export function Institucion() {
   const sectionRef = "institution-section";

@@ -5,7 +5,7 @@
 }
 
 .aboutSection {
-    background-image: url("../../imgs/home/home-about-section-bg.svg");
+    background-image: url("../../assets/imgs/home/home-about-section-bg.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,22 +27,16 @@
             justify-content: center;
 
             &>h3 {
-                font-size: 1.25rem;
-                line-height: 1.25rem;
                 color: #595959;
             }
             
             &>h1 {
-                font-size: 2.5rem;
-                line-height: 2.5rem;
                 color: #34A853;
                 margin-top: 20px;
             }
 
             &>p {
                 font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.25rem;
                 color: #595959;
                 margin: 50px 0;
                 align-self: center;
@@ -80,12 +74,10 @@
         flex-direction: column;
         gap: 40px;
 
-        &>h3 {
+        &>h1 {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 800;
-            font-size: 2.25rem;
-            line-height: 2.25rem;
             color: #FFFFFF;
             text-align: center;
         }
@@ -94,7 +86,7 @@
 
 .eventSection {
     @include elem-flex ( center, center );
-    background-image: url("../../imgs/home/eventSection-bg.png");
+    background-image: url("../../assets/imgs/home/eventSection-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -109,15 +101,11 @@
 
         &>h1 {
             font-weight: 800;
-            font-size: 2.25rem;
-            line-height: 2.25rem;
             color: #595959;
         }
 
         &>p {
             font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.25rem;
             width: 100%;
             text-align: center;
             color: #fff;

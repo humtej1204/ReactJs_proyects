@@ -73,14 +73,17 @@ export function MapMenu() {
                 <hr className={`${(vanished)?('vanished'):('')}`}
                 style={{transform: `translateY(${(vanished)?('0px'):('-61px')})`}} />
                 <i className={`fi fi-rr-map-marker-home icon ${(vanished)?('vanished'):('')}`}
+                onClick={handleAnimation}
                 style={{transform: `translateY(${(vanished)?('0px'):('-30.5px')})`}} ></i>
                 <hr className={`${(vanished)?('vanished'):('')}`}
                 style={{transform: `translateY(${(vanished)?('0px'):('0px')})`}} />
                 <i className={`fi fi-rr-marker icon ${(vanished)?('vanished'):('')}`}
+                onClick={handleAnimation}
                 style={{transform: `translateY(${(vanished)?('0px'):('30.5px')})`}} ></i>
                 <hr className={`${(vanished)?('vanished'):('')}`}
                 style={{transform: `translateY(${(vanished)?('0px'):('61px')})`}} />
                 <i className={`fi fi-rr-map-marker icon ${(vanished)?('vanished'):('')}`}
+                onClick={handleAnimation}
                 style={{transform: `translateY(${(vanished)?('0px'):('91.5px')})`}} ></i>
             </div>
 

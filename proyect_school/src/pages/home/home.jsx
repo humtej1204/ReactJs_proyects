@@ -13,7 +13,7 @@ import { events } from "./eventsInfo";
 import './home.scss'
 
 /* Images */
-import aboutImg from '../../imgs/home/IMG01.jpg';
+import aboutImg from '../../assets/imgs/home/IMG01.jpg';
 
 export function Home() {
   return (
@@ -44,7 +44,7 @@ export function Home() {
           
           <article className="opinionSection">
             <div className="container">
-              <h3>ASI OPINAN NUESTROS ALUMNOS Y GRADUADOS</h3>
+              <h1>ASI OPINAN NUESTROS ALUMNOS Y GRADUADOS</h1>
               <OpinionComponent
                 opinions={opinions}
               />

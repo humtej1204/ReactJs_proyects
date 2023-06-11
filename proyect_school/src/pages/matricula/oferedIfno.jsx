@@ -1,7 +1,7 @@
 /* Images */
-import img01 from "../../imgs/matricula/morning_icon.png";
-import img02 from "../../imgs/matricula/afternoon_icon.png";
-import img03 from "../../imgs/matricula/docentes_icon.png";
+import img01 from "../../assets/imgs/matricula/morning_icon.png";
+import img02 from "../../assets/imgs/matricula/afternoon_icon.png";
+import img03 from "../../assets/imgs/matricula/docentes_icon.png";
 
 export const oferedInfo = [
     {

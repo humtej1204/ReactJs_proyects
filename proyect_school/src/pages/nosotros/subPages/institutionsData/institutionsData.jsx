@@ -8,8 +8,8 @@ import { MapComponent } from './components/mapComponent/MapComponent';
 import './institutionsData.scss';
 
 /* Images */
-import friendsImg from '../../../../imgs/nosotros/undraw_friends.png';
-import logo from '../../../../imgs/components/logo_school.png'
+import friendsImg from '../../../../assets/imgs/nosotros/undraw_friends.png';
+import logo from '../../../../assets/imgs/components/logo_school.png'
 
 export function InstitutionData() {
     return (

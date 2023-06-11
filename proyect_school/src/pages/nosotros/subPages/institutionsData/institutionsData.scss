@@ -18,7 +18,7 @@
     #data_section {
         @include card-shadow();
         width: clamp(1024px, 100%, 1440px);
-        background-image: url('../../../../imgs/nosotros/bg_poligon03.png');
+        background-image: url('../../../../assets/imgs/nosotros/bg_poligon03.png');
         background-position: top;
         background-repeat: no-repeat;
         background-size: 100% 75%;

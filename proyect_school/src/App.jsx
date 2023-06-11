@@ -7,10 +7,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import { AppContextProvider } from './contexts/ContextProvider';
+import { ScrollToTop } from './util/ScrollToTop';
 
 /* Components */
-import { Header } from './components/header'
-import { Footer } from "./components/footer";
+import { Header } from './components/header/header'
+import { Footer } from "./components/footer/footer";
 import { Overlay } from "./components/overlay/Overlay";
 
 /* Pages Views */
@@ -19,7 +20,7 @@ import { Institucion } from "./pages/institucion/institucion";
 import { Matricula } from "./pages/matricula/matricula";
 import { Nosotros } from "./pages/nosotros/nosotros";
 import { InstitutionData } from "./pages/nosotros/subPages/institutionsData/institutionsData";
-import { MisionVision } from "./pages/nosotros/subPages/mision-vision/misionVision";
+import { MisionVision } from "./pages/nosotros/subPages/mision-vision/MisionVision";
 import { Contactanos } from "./pages/contactanos/contactanos";
 import { NotFoundPage } from "./pages/errorPages/notFound"
 
@@ -30,6 +31,7 @@ export function App() {
         <Overlay></Overlay>
         
         <BrowserRouter>
+          <ScrollToTop />
           <Header />
           
           <Routes>

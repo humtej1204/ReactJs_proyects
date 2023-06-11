@@ -1,9 +1,9 @@
 /* Images */
-import patio_sect from '../../imgs/institucion/patio_sect.png';
-import comedor_sect from '../../imgs/institucion/comedor_sect.png';
-import computo_sect from '../../imgs/institucion/computo_sect.png';
-import ciencias_sect from '../../imgs/institucion/ciencias_sect.png';
-import musica_sect from '../../imgs/institucion/musica_sect.png';
+import patio_sect from '../../assets/imgs/institucion/patio_sect.png';
+import comedor_sect from '../../assets/imgs/institucion/comedor_sect.png';
+import computo_sect from '../../assets/imgs/institucion/computo_sect.png';
+import ciencias_sect from '../../assets/imgs/institucion/ciencias_sect.png';
+import musica_sect from '../../assets/imgs/institucion/musica_sect.png';
 
 export const sectionData = [
     {

@@ -1,9 +1,9 @@
-import img01 from '../../imgs/home/img16.jpg'
-import img02 from '../../imgs/home/img12.png'
-import img04 from '../../imgs/home/img13.jpg'
-import img05 from '../../imgs/home/img11.jpg'
-import img03 from '../../imgs/home/img14.jpg'
-import img06 from '../../imgs/home/img15.jpg'
+import img01 from '../../assets/imgs/home/img16.jpg'
+import img02 from '../../assets/imgs/home/img12.png'
+import img04 from '../../assets/imgs/home/img13.jpg'
+import img05 from '../../assets/imgs/home/img11.jpg'
+import img03 from '../../assets/imgs/home/img14.jpg'
+import img06 from '../../assets/imgs/home/img15.jpg'
 
 export const events = [
     {

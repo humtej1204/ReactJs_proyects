@@ -18,7 +18,7 @@ export function SectionPresentation({ content }) {
 
   return (
     <section className="full-window bg-sect"
-      style={{ backgroundImage: `url(${main_image})` }}>
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(${main_image})` }}>
       <div className="insti-sec-content item-section">
         <h1>
           <span>{tittle}</span>

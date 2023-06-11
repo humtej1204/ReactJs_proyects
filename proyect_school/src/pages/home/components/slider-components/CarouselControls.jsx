@@ -1,6 +1,6 @@
 /* Images */
-import left_icon from '../../../../imgs/home/angulo-izquierdo.svg';
-import right_icon from '../../../../imgs/home/angulo-derecho.svg';
+import left_icon from '../../../../assets/imgs/home/angulo-izquierdo.svg';
+import right_icon from '../../../../assets/imgs/home/angulo-derecho.svg';
 
 export function CarouselControls({ prev, next }) {
     return (

@@ -2,14 +2,14 @@
 import { NavLink } from "react-router-dom";
 
 /* Images */
-import logo from '../imgs/components/logo_school.png'
-import intranet_icon from '../imgs/components/intranet.svg'
-import sub_nav_icon01 from '../imgs/components/huella-dactilar.svg'
-import sub_nav_icon02 from '../imgs/components/banco.svg'
-import sub_nav_icon03 from '../imgs/components/diploma.svg'
-import sub_nav_icon04 from '../imgs/components/construccion-de-automoviles.svg'
-import sub_nav_icon05 from '../imgs/components/formulario.svg'
-import sub_nav_icon06 from '../imgs/components/calendario.svg'
+import logo from '../../assets/imgs/components/logo_school.png'
+import intranet_icon from '../../assets/imgs/components/intranet.svg'
+import sub_nav_icon01 from '../../assets/imgs/components/huella-dactilar.svg'
+import sub_nav_icon02 from '../../assets/imgs/components/banco.svg'
+import sub_nav_icon03 from '../../assets/imgs/components/diploma.svg'
+import sub_nav_icon04 from '../../assets/imgs/components/construccion-de-automoviles.svg'
+import sub_nav_icon05 from '../../assets/imgs/components/formulario.svg'
+import sub_nav_icon06 from '../../assets/imgs/components/calendario.svg'
 
 /* StyleSheet */
 import './header.scss'

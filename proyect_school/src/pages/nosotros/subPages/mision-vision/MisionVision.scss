@@ -1,0 +1,171 @@
+@import 'src/index.scss';
+
+#misionVision {
+    width: 100%;
+
+    #presentation_banner {
+        width: 100%;
+        height: calc(100vh * 0.5);
+        background-position: center 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        h1 {
+            font-size: 3rem;
+            filter: drop-shadow(0 0.25rem 2px rgba(black, 0.5));
+        }
+
+        p {
+            width: 800px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+#misionVision_content {
+    width: clamp(1024px, 100%, 1440px);
+    @include card-shadow();
+
+    #values {
+        background-color: var(--red);
+        color: white;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .values_container {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .value_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                .value_icon {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    border: solid white 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    #objectives {
+        position: relative;
+        overflow: hidden;
+        
+        img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 5;
+            border-radius: 0 100% 100% 0;
+            position: absolute;
+            left: 0;
+        }
+
+        .objective_container {
+            width: calc(70% - 100px);
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 50px;
+            margin-right: 0;
+            margin-left: auto;
+
+            .objective_icon {
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                border: solid white 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                z-index: 10;
+
+                i {
+                    width: 75px;
+                    height: 75px;
+                    font-size: 75px;
+                    transition-duration: 0s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: white;
+                }
+            }
+
+            .mision_icon {
+                background-color: var(--green);
+
+                &:hover {
+                    color: var(--green);
+                    border-color: var(--green);
+                }
+            }
+
+            .vision_icon {
+                background-color: var(--yellow);
+
+                &:hover {
+                    border-color: var(--yellow);
+                    color: var(--yellow);
+                }
+            }
+
+            .objective_content {
+                width: calc(100% - 200px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-end;
+                gap: 1rem;
+
+                p {
+                    color: #333;
+                }
+            }
+
+            .mision_content {
+                h1 {
+                    color: var(--green);
+                }
+            }
+
+            .vision_content {
+                h1 {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}

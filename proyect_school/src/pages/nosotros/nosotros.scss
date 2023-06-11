@@ -1,3 +1,5 @@
+@import 'src/index.scss';
+
 #nosotros-sect {
     width: 100%;
     display: flex;
@@ -35,10 +37,14 @@
             object-fit: cover;
         }
     }
+    
+    .nosotros-container {
+        width: clamp(1024px, 100%, 1440px);
+        @include card-shadow();
+    }
 
     #nosotros-info_whoWeAre {
         background-color: #EA4335;
-        width: 100vw;
         display: flex;
         justify-content: center;
         gap: 50px;
@@ -52,12 +58,7 @@
             gap: 2rem;
             color: #fff;
 
-            h1 {
-                font-size: clamp(3rem, 3vw, 4rem);
-            }
-
             p {
-                font-size: 0.8rem;
                 text-align: center;
             }
         }
@@ -80,7 +81,6 @@
     }
 
     #nosotros-info_whyWe {
-        width: 100vw;
         display: flex;
         justify-content: center;
 
@@ -93,10 +93,6 @@
             flex-direction: column;
             justify-content: center;
             gap: 2rem;
-
-            h1 {
-                font-size: 4rem;
-            }
 
             h1, p {
                 width: clamp(300px, 75%, 800px);
@@ -121,7 +117,6 @@
     }
 
     #nosotros-services_sect {
-        width: 100vw;
         background-color: #34A853;
         display: flex;
         align-items: center;
@@ -130,7 +125,6 @@
         padding: 75px 0;
 
         h1 {
-            font-size: 3rem;
             width: clamp(300px, 90%, 1200px);
             color: #fff;
         }
@@ -160,14 +154,16 @@
 
                 h3 {
                     color: #333;
-                    font-size: 1.2rem;
+                }
+
+                span {
+                    font-size: 0.9rem;
                 }
 
                 h2 {
                     margin-top: 1.5rem;
                     margin-bottom: 1rem;
                     color: #333;
-                    font-size: 2rem;
                 }
 
                 p {
@@ -254,11 +250,6 @@
 
                     h2 {
                         color: #333;
-                        font-size: 1.5rem;
-                    }
-
-                    p {
-                        font-size: 0.9rem;
                     }
                 }
             }

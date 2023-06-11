@@ -4,7 +4,7 @@ import React from "react";
 import './contactanos.scss'
 
 /* Images */
-import logo from "../../imgs/components/logo_school.png";
+import logo from "../../assets/imgs/components/logo_school.png";
 
 export function Contactanos() {
   return (

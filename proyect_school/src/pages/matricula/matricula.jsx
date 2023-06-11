@@ -11,7 +11,7 @@ import { oferedInfo } from "./oferedIfno"
 import './matricula.scss'
 
 /* Images */
-import formacionSemanal from "../../imgs/matricula/formacion_semanal.png";
+import formacionSemanal from "../../assets/imgs/matricula/formacion_semanal.png";
 
 function OferedItem({img, tittle, description}) {
   return (

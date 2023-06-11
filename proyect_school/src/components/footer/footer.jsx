@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 
 /* Images */
-import logo from '../imgs/components/logo_school.png'
+import logo from '../../assets/imgs/components/logo_school.png'
 
 /* StyleSheet */
 import './footer.scss'

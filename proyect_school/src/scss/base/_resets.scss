@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    transition: all ease-in-out 0.25s;
+}
+
 *,
 ::after,
 ::before {
@@ -17,8 +21,6 @@ a {
 
 li {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .header-sep {
@@ -29,11 +31,8 @@ body {
     font-family: Inter;
     
     &::-webkit-scrollbar {
-        width: 5px;
-
-        &:hover{
-            width: 12px;
-        }
+        width: 7.5px;
+        background: #ddd;
         
         &:horizontal {
             display: none;
@@ -44,4 +43,24 @@ body {
         background: #999;
         border-radius: 5px;
     }
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 0.9rem;
 }

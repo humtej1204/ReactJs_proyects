@@ -13,6 +13,7 @@
     opacity: 1;
     display: initial;
     transition: all ease-in-out var(--menuAnimation-duration);
+    backdrop-filter: blur(2.5px);
 }
 
 .menuBar {
