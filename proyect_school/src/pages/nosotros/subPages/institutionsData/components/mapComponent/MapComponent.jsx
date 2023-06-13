@@ -29,8 +29,8 @@ export function MapComponent() {
         <GoogleMap
             mapContainerClassName="map-container"
             center={center}
-            zoom={'18'}
             onLoad={onLoad}
+            zoom={18}
             onUnmount={onUnmount}
             options={{
                 zoom: 18,

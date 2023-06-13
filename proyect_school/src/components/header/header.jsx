@@ -80,19 +80,19 @@ export function Header() {
             >Institución</NavLink>
             <ul className="sub-nav">
               <li>
-                <NavLink to="/">
+                <NavLink to="/institucion">
                   <img src={sub_nav_icon04} alt="" />
                   Infraestructura
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/">
+                <NavLink to="/noticias">
                   <img src={sub_nav_icon05} alt="" />
                   Noticias
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/">
+                <NavLink to="/eventos">
                   <img src={sub_nav_icon06} alt="" />
                   Eventos
                 </NavLink>

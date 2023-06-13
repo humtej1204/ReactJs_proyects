@@ -1,0 +1,111 @@
+#noticias_section {
+    width: 100%;
+
+    .hero_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+        padding: 50px;
+
+        .hero_bg_container {
+            width: 100%;
+            height: 75%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            overflow: hidden;
+
+            .hero_bg {
+                width: calc(100% + 40px);
+                object-fit: cover;
+                margin: -20px;
+                filter: blur(10px);
+            }
+        }
+
+        .hero_data_container {
+            width: clamp(1024px, 90%, 1440px);
+            aspect-ratio: 8/3;
+            overflow: hidden;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+    
+            .hero_data {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                
+                h1 {
+                    margin: 1rem 0 0.5rem 0;
+                    font-size: 2rem;
+                }
+            }
+    
+            .hero_img {
+                width: 60%;
+            }
+        }
+    }
+
+    .main_articles {
+        width: clamp(1024px, 90%, 1440px);
+        padding: 50px;
+        padding-top: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        align-items: center;
+
+        .article_container {
+            width: max(300px, 30%);
+            aspect-ratio: 2/1;
+            display: flex;
+            border: solid 1px #c5c5c5;
+            overflow: hidden;
+
+            .article_img {
+                width: 35%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .article_info_container {
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 15px;
+
+                .article_info {
+                    display: flex;
+                    flex-direction: column;
+
+                    h1 {
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .article_data {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    span {
+                        font-size: 0.8rem
+                    }
+                }
+            }
+        }
+    }
+}

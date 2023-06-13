@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 /* Styles */
@@ -10,6 +10,23 @@ import misionImg from '../../../../assets/imgs/nosotros/mision-img.png';
 import visionImg from '../../../../assets/imgs/nosotros/vision-img.png';
 
 export function MisionVision() {
+    const [sectionActive, setSectionActive] = useState('mision');
+    const [entryAnimation, setEntryAnimation] = useState(true);
+    const [objImg, setObjImg] = useState(misionImg);
+
+    const handleChangeSection = (key) => {
+        setSectionActive(key);
+    }
+
+    useEffect(() => {
+        setEntryAnimation(false);
+
+        setTimeout(() => {
+            setEntryAnimation(true);
+            setObjImg((sectionActive === 'mision')?(misionImg):(visionImg));
+        }, 200);
+    }, [sectionActive]);
+
     return (
         <main id="misionVision">
             <section id="presentation_banner"
@@ -36,11 +53,17 @@ export function MisionVision() {
                 </article>
 
                 <article id="objectives">
-                    <img src={misionImg} alt="" />
-                    <div className="objective_container">
-                        <div className="objective_icon mision_icon">
+                    <div className="img_container">
+                        <img src={objImg}
+                        alt={sectionActive + "section"}
+                        className={(entryAnimation)?(''):('img_entry')} />
+                    </div>
+
+                    <div className={`objective_container ${(sectionActive === 'mision')?('mision_container container_active'):('')}`}>
+                        <button className="objective_btn mision_icon"
+                        onClick={() => handleChangeSection("mision")}>
                             <i class="fi fi-rs-bullseye-arrow"></i>
-                        </div>
+                        </button>
                         <div className="objective_content mision_content">
                             <h1>MISIÓN</h1>
                             <p>
@@ -48,10 +71,11 @@ export function MisionVision() {
                             </p>
                         </div>
                     </div>
-                    <div className="objective_container">
-                        <div className="objective_icon vision_icon">
+                    <div className={`objective_container ${(sectionActive === 'vision')?('vision_container container_active'):('')}`}>
+                        <button className="objective_btn vision_icon"
+                        onClick={() => handleChangeSection("vision")}>
                             <i class="fi fi-rs-eye"></i>
-                        </div>
+                        </button>
                         <div className="objective_content vision_content">
                             <h1>VISIÓN</h1>
                             <p>

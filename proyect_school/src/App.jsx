@@ -16,11 +16,13 @@ import { Overlay } from "./components/overlay/Overlay";
 
 /* Pages Views */
 import { Home } from "./pages/home/home";
-import { Institucion } from "./pages/institucion/institucion";
 import { Matricula } from "./pages/matricula/matricula";
 import { Nosotros } from "./pages/nosotros/nosotros";
 import { InstitutionData } from "./pages/nosotros/subPages/institutionsData/institutionsData";
 import { MisionVision } from "./pages/nosotros/subPages/mision-vision/MisionVision";
+import { Institucion } from "./pages/institucion/institucion";
+import { Noticias } from "./pages/institucion/subPages/noticias/Noticias";
+import { Eventos } from "./pages/institucion/subPages/eventos/Eventos";
 import { Contactanos } from "./pages/contactanos/contactanos";
 import { NotFoundPage } from "./pages/errorPages/notFound"
 
@@ -42,6 +44,8 @@ export function App() {
             <Route path="/datosInstitucionales" element={<InstitutionData />} />
             <Route path="/misionVision" element={<MisionVision />} />
             <Route path="/institucion" element={<Institucion />} />
+            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/eventos" element={<Eventos />} />
             <Route path="/contactanos" element={<Contactanos />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

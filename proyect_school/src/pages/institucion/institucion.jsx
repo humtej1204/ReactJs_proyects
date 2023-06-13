@@ -35,18 +35,14 @@ export function Institucion() {
   useEffect(() => {
     if (document.getElementById("main-footer")) {
       document.getElementById("main-footer").style.display = "none";
+    } else {
+      document.getElementById('main-footer').style.display = 'flex';
     }
 
     return () => {
       document.getElementById("main-footer").style.display = "flex";
     };
   });
-
-  useEffect(() => {
-    return (() => {
-      document.getElementById('main-footer').style.display = 'flex';
-    });
-  }, []);
 
   const handleDatosHijo = (datos) => {
     setSlideIndex(datos);

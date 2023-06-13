@@ -48,10 +48,10 @@ export function Footer() {
                     <NavLink to="/institucion">Infraestructura</NavLink>
                   </li>
                   <li className="sub-title">
-                    <NavLink to="/institucion">Noticias</NavLink>
+                    <NavLink to="/noticias">Noticias</NavLink>
                   </li>
                   <li className="sub-title">
-                    <NavLink to="/institucion">Eventos</NavLink>
+                    <NavLink to="/eventos">Eventos</NavLink>
                   </li>
                 </ul>
               </li>
