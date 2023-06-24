@@ -3,6 +3,9 @@ import React from "react";
 /* Styles */
 import './Noticias.scss'
 
+/* Components */
+import { ArticleSlider } from './components/ArticleSlider';
+
 /* Images */
 import main_sect from '../../../../assets/imgs/institucion/main_sect.png'
 
@@ -19,7 +22,7 @@ export function Noticias() {
                     <div className="hero_data">
                         <span>Haru Tejada</span>
                         <h1>
-                            SPACE AND TIME | HIMNO DE CONVERGENCE
+                        SPACE AND TIME | HIMNO DE CONVERGENCE SPACE AND TIME
                         </h1>
                         <p>
                             Mira el video musical de Space and Time, el himno de CONVERGENCE: A League of Legends Story. Video...
@@ -29,27 +32,32 @@ export function Noticias() {
                 </div>
             </section>
 
-            <section className="main_articles">
-                {test.map((elem, index) => (
-                    <article className="article_container" key={index + elem}>
-                        <img className="article_img" src={main_sect} alt="" />
-                        <div className="article_info_container">
-                            <div className="article_data">
-                                <span>13/06/2023</span>
-                                <span>Autor: Haru Tejada</span>
-                            </div>
-                            <div className="article_info">
-                                <h1>SPACE AND TIME | HIMNO DE CONVERGENCE</h1>
-                                <p>
-                                    Mira el video musical de Space and Time, el himno de CONVERGENCE: A League of Legends Story. Video...
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                ))}
+            <section className="articleSlider_container">
+                <ArticleSlider />
+            </section>
+
+            <section className="search_container">
+                <div className="filter_container">
+                    <select name="filterType">
+                        <option value="tittle" selected>Titulo</option>
+                        <option value="author">Autor</option>
+                    </select>
+                    <input type="text" placeholder="Buscar" />
+                </div>
+
+                <div className="dateFilter_container">
+                    <input type="date" id="range_start" name="range_start" />
+                    <input type="date" id="range_end" name="range_end" />
+                </div>
+
+                <button>Filtrar</button>
+            </section>
+
+            <section className="news_container">
+                <div className="news_card">
+                    asd
+                </div>
             </section>
         </main>
     );
 }
-
-const test = [1, 2, 3]

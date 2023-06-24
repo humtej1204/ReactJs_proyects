@@ -1,0 +1,90 @@
+@import 'src/index.scss';
+
+.main_articles {
+    width: clamp(1024px, 100%, 1540px);
+    height: max-content;
+    padding: 50px;
+    overflow-x: auto;
+
+    .articles_container {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .article_container {
+        width: 450px;
+        height: 225px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+        .article_img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+            @include card-shadow();
+        }
+
+        .article_info_container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px 25px 25px 125px;
+            background-color: white;
+            border-radius: 10px;
+            @include card-shadow();
+
+            .article_info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h1 {
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .article_data {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                span {
+                    font-size: 0.75rem
+                }
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(#fff, 0.25);
+        border-radius: 2rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 2rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #999; 
+    }
+}
