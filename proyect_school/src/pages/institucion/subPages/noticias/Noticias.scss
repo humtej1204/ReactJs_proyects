@@ -2,6 +2,7 @@
 
 #noticias_section {
     width: 100%;
+    background-color: #f7f7f7;
 
     .hero_container {
         width: 100%;
@@ -67,6 +68,7 @@
         z-index: 2;
         transform: translate(0, -150px);
         background: url(../../../../assets/imgs/institucion/fondoNews.png);
+        background-position: 0 25px;
         padding-top: 100px;
 
         ArticleSlider {
@@ -101,13 +103,14 @@
                 font-size: 1rem;
                 font-weight: 600;
                 color: #444;
+                background-color: white;
 
                 &:hover {
-                    background-color: #bbb;
+                    background-color: #ccc;
                 }
     
                 &:active {
-                    background-color: #ddd;
+                    background-color: #eee;
                 }
             }
         }
@@ -125,7 +128,6 @@
         justify-content: space-between;
         border-radius: 20px;
         border: var(--blue) solid 1px;
-        @include card-shadow();
         overflow: hidden;
         margin-bottom: 30px;
 
@@ -219,8 +221,9 @@
     .news_card {
         overflow: hidden;
         border-radius: 10px;
-        @include card-shadow();
+        // @include card-shadow();
         cursor: pointer;
+        background-color: white;
 
         &:hover {
             transform: scale(1.02);
