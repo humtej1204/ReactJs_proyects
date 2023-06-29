@@ -5,12 +5,19 @@ import './Noticias.scss'
 
 /* Components */
 import { ArticleSlider } from './components/ArticleSlider';
+import { SearchBar } from "../../../../components/searchBar/SearchBar";
 
 /* Images */
 import main_sect from '../../../../assets/imgs/institucion/main_sect.png'
 
 
 export function Noticias() {
+    const filterTypeList = [
+        {key: "tittle", value: "Titulo"},
+        {key: "description", value: "Descripción"},
+        {key: "author", value: "Autor"},
+    ]
+
     return (
         <main id="noticias_section">
             <section className="hero_container">
@@ -36,22 +43,8 @@ export function Noticias() {
                 <ArticleSlider />
             </section>
 
-            <form>
-                <section className="search_container">
-                    <div className="search-input_container">
-                        <i class="fi fi-br-caret-down"></i>
-                        <select name="filterType">
-                            <option value="tittle" selected>Titulo</option>
-                            <option value="author">Autor</option>
-                        </select>
-                        <input type="text" placeholder="Buscar" />
-                    </div>
-
-                    <button className="search_btn">
-                        <span>Buscar</span>
-                        <i class="fi fi-br-search"></i>
-                    </button>
-                </section>
+            <section className="search_filter_section">
+                <SearchBar filterTypeList={filterTypeList} />
 
                 <section className="filter_container">
                     <button className="filter_btn">
@@ -69,7 +62,7 @@ export function Noticias() {
                 </section> */}
 
                 <hr />
-            </form>
+            </section>
 
             <section className="news_container">
                 {test.map((elem, index) => (

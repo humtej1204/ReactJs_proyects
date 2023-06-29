@@ -1,0 +1,160 @@
+#eventos-section {
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    
+    .searchbar_Section {
+        width: min(1400px, 90%);
+    }
+
+    .events_content {
+        width: min(1400px, 90%);
+        display: flex;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .events_filter {
+        width: clamp(350px, 30%, 400px);
+        height: fit-content;
+        background-color: white;
+        padding: 2rem 1.5rem;
+        border-radius: 5px;
+
+        h1 {
+            color: #303030;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+        }
+
+        h2 {
+            color: #303030;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .filter_btns {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            button {
+                width: 175px;
+                padding: 0.25rem;
+                text-align: left;
+                font-size: 0.9rem;
+                font-weight: 400;
+                background-color: transparent;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #eee;
+                }
+
+                &:active {
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+
+        .date_filter {
+            padding: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-top: 0.5rem;
+            }
+
+            select {
+                padding: 0.3rem;
+                border: #909090 solid 1px;
+                border-radius: 5px;
+            }
+
+            input {
+                padding: 0.3rem;
+                border: #909090 solid 1px;
+                border-radius: 5px;
+                text-indent: 0.3rem;
+            }
+        }
+    }
+
+    .events_list_container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .event_card {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            img {
+                width: 40%;
+                height: 225px;
+            }
+
+            .event_data_container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                h1 {
+                    font-size: 1.25rem;
+                    color: #303030;
+                }
+
+                .event_data_info {
+                    width: 100%;
+                    font-size: 0.8rem;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .btn_more {
+            width: 100%;
+            height: 40px;
+            background-color: var(--yellow);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ffad00;
+            }
+
+            &:active {
+                background-color: #ffcf00;
+            }
+        }
+    }
+}
