@@ -22,7 +22,9 @@ import { InstitutionData } from "./pages/nosotros/subPages/institutionsData/inst
 import { MisionVision } from "./pages/nosotros/subPages/mision-vision/MisionVision";
 import { Institucion } from "./pages/institucion/institucion";
 import { Noticias } from "./pages/institucion/subPages/noticias/Noticias";
+import { SelectedNoticia } from "./pages/institucion/subPages/selectedNoticia/SelectedNoticia";
 import { Eventos } from "./pages/institucion/subPages/eventos/Eventos";
+import { SelectedEvento } from "./pages/institucion/subPages/selectedEvento/SelectedEvento";
 import { Contactanos } from "./pages/contactanos/contactanos";
 import { NotFoundPage } from "./pages/errorPages/notFound"
 
@@ -45,7 +47,9 @@ export function App() {
             <Route path="/misionVision" element={<MisionVision />} />
             <Route path="/institucion" element={<Institucion />} />
             <Route path="/noticias" element={<Noticias />} />
+            <Route path="/noticias/:newsId" element={<SelectedNoticia />} />
             <Route path="/eventos" element={<Eventos />} />
+            <Route path="/eventos/:eventId" element={<SelectedEvento />} />
             <Route path="/contactanos" element={<Contactanos />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

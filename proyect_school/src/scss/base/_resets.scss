@@ -4,7 +4,6 @@ html {
 
 * {
     transition: all ease-in-out 0.25s;
-    font-family: Inter;
 }
 
 *,
@@ -29,6 +28,8 @@ li {
 }
 
 body {
+    font-family: Inter;
+
     &::-webkit-scrollbar {
         width: 7.5px;
         background: #ddd;

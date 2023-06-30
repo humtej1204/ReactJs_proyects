@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 25px;
+
+    * {
+        font-family: Inter;
+    }
     
     .searchbar_Section {
         width: min(1400px, 90%);

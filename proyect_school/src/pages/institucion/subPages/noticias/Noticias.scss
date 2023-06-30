@@ -49,6 +49,7 @@
                     margin: 1rem 0 0.5rem 0;
                     font-size: 2rem;
                     line-height: 2.2rem;
+                    font-style: italic;
                 }
             }
     
@@ -127,7 +128,7 @@
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(auto-fit, 250px);
-        grid-template-rows: repeat(auto-fit, 350px);
+        grid-template-rows: repeat(auto-fit, 375px);
         gap: 30px;
         place-items: stretch;
     }
@@ -135,9 +136,9 @@
     .news_card {
         overflow: hidden;
         border-radius: 10px;
-        // @include card-shadow();
         cursor: pointer;
         background-color: white;
+        color: #333;
 
         &:hover {
             transform: scale(1.02);
@@ -150,7 +151,7 @@
         }
 
         .news_card_data_content {
-            height: 200px;
+            height: 225px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -180,7 +181,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
     }
 }

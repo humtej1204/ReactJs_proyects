@@ -54,7 +54,7 @@
     }
 
     .search_btn {
-        width: 125px;
+        width: 75px;
         background-color: var(--blue);
         color: white;
         display: flex;
@@ -67,11 +67,11 @@
         cursor: pointer;
 
         &:hover {
-            background-color: #3265B3;
+            background-color: #1D52A8;
         }
 
         &:active {
-            background-color: #3581E6;
+            background-color: #3B79DB;
         }
 
         i {

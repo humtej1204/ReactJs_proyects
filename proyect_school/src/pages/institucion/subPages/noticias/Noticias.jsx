@@ -25,7 +25,7 @@ export function Noticias() {
                     <img className="hero_bg" src={main_sect} alt="" />
                 </div>
 
-                <div className="hero_data_container">
+                <article className="hero_data_container">
                     <div className="hero_data">
                         <span>Haru Tejada</span>
                         <h1>
@@ -36,7 +36,7 @@ export function Noticias() {
                         </p>
                     </div>
                     <img className="hero_img" src={main_sect} alt="" />
-                </div>
+                </article>
             </section>
 
             <section className="articleSlider_container">
@@ -66,7 +66,8 @@ export function Noticias() {
 
             <section className="news_container">
                 {test.map((elem, index) => (
-                    <div className="news_card" key={"news_" + index}>
+                    <a href="/noticias/asd"
+                    className="news_card" key={"news_" + index}>
                         <img src={main_sect} alt="" />
                         <article className="news_card_data_content">
                             <div className="news_card_content">
@@ -74,18 +75,20 @@ export function Noticias() {
                                     SPACE AND TIME | HIMNO DE CONVERGENCE SPACE AND TIME
                                 </h1>
                                 <p>
-                                    Mira el video musical de Space and Time, el himno de CONVERGENCE: A League of Legends Story. Video...
+                                    Mira el video musical de Space and Time, el himno de CONVERGENCE: A League of Legends Story. Video asd asd asdasdasda ssadasdaea sd asde asda asdas...
                                 </p>
                             </div>
 
                             <div className="news_card_info">
-                                <span>23/08/23</span>
+                                <span>
+                                    <b>23/08/23</b>
+                                </span>
                                 <span>
                                     <b>Autor:</b> Haru Tejada
                                 </span>
                             </div>
                         </article>
-                    </div>
+                    </a>
                 ))}
             </section>
         </main>

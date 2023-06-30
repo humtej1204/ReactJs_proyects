@@ -20,7 +20,6 @@ export function SearchBar({ filterTypeList, sizeWidth = '800px' }) {
             </div>
 
             <button className="search_btn">
-                <span>Buscar</span>
                 <i class="fi fi-br-search"></i>
             </button>
         </form>
