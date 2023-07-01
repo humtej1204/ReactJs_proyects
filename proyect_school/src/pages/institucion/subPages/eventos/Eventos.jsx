@@ -19,7 +19,7 @@ export function Eventos() {
 
     return (
         <main id="eventos-section">
-            <EventsBanner />
+            <EventsBanner /> 
 
             <section className="searchbar_Section">
                 <SearchBar filterTypeList={filterTypeList} sizeWidth={'100%'} />
@@ -53,10 +53,11 @@ export function Eventos() {
 
                 <div className="events_list_container">
                     {test.map((elem, index) => (
-                        <article className="event_card">
+                        <a href="/eventos/asd" key={"event_card_" + index}
+                        className="event_card">
                             <img src={main_sect} alt="" />
 
-                            <div className="event_data_container">
+                            <article className="event_data_container">
                                 <h1>
                                     SPACE AND TIME | HIMNO DE CONVERGENCE SPACE AND TIME
                                 </h1>
@@ -71,8 +72,8 @@ export function Eventos() {
                                     </span>
                                     <span>Aug 24, 2022</span>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </a>
                     ))}
 
                     <button className="btn_more">

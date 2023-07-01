@@ -49,7 +49,7 @@ export function Noticias() {
                 <section className="filter_container">
                     <button className="filter_btn">
                         <span>Filtrar</span>
-                        <i class="fi fi-rs-settings-sliders"></i>
+                        <i className="fi fi-rs-settings-sliders"></i>
                     </button>
                 </section>
 

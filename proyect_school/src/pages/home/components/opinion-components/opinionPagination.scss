@@ -3,13 +3,12 @@
 .pagination {
     @include elem-size ( 100%, 10% );
     @include elem-flex( center, center );
+    gap: 0.5rem;
 
     &>button, &>div, &>input {
-        @include elem-size ( 5vh, 5vh );
-        max-width: 40px;
-        max-height: 40px;
+        @include elem-size ( 40px, 40px );
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
         border: 0;
         border-radius: 5px;
@@ -19,6 +18,7 @@
     
     &>button {
         background-color: transparent;
+        @include elem-flex( center, center );
         cursor: pointer;
 
         &:hover {
@@ -37,14 +37,12 @@
         }
     }
 
-    &>div {
-        margin: 0 0.75vh;
-        display: flex;
+    &>.maxPage_indicator {
+        @include elem-flex( center, center );
     }
 
     &>input {
         color: #454545;
-        margin: 0 0.75vh;
         font-size: 1rem;
         border-bottom: #303030;
     }

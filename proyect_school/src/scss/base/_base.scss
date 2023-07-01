@@ -5,14 +5,6 @@ main {
     overflow-x: hidden;
 }
 
-
-@media screen and (min-width: 1440px) {
-    .content-main {
-        width: 1440px;
-        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
-    }
-}
-
 .inputForm {
     display: flex;
     flex-direction: column;
@@ -47,4 +39,10 @@ main {
 .full-window {
     width: 100vw;
     height: calc(100vh - var(--header-height));
+}
+
+.container_responsive {
+    width: 80%;
+    min-width: 1000px;
+    max-width: 1400px;
 }

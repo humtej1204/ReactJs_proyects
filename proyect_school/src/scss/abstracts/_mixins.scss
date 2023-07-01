@@ -44,10 +44,9 @@ $breakpoints: (
 }
 
 @mixin btn-001($fstcolor, $sndcolor: #fff) {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: $fstcolor;
-    width: 340px;
-    padding: 15px 0;
+    padding: 15px 2rem;
     box-sizing: content-box;
     border: 3px solid $fstcolor;
     border-radius: 25px;

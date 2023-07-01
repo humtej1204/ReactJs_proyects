@@ -60,7 +60,7 @@ export function OpinionPagination({ page, setPage, max }) {
                 onChange={(e) => onChange(e)}
                 value={input}
             />
-            <div>{String(max)}</div>
+            <div className='maxPage_indicator'>{String(max)}</div>
             <button
                 disabled={(page === max) ? true : false}
                 onClick={() => chgPage("next")}

@@ -44,7 +44,7 @@ export function MisionVision() {
                         {values.map((elem, index) => (
                             <div key={'value_' + index} className="value_container">
                                 <div className="value_icon">
-                                    <i class={`fi fi-rr-${elem.icon}`}></i>
+                                    <i className={`fi fi-rr-${elem.icon}`}></i>
                                 </div>
                                 <h2 className="value_text">{elem.value}</h2>
                             </div>
@@ -62,7 +62,7 @@ export function MisionVision() {
                     <div className={`objective_container ${(sectionActive === 'mision')?('mision_container container_active'):('')}`}>
                         <button className="objective_btn mision_icon"
                         onClick={() => handleChangeSection("mision")}>
-                            <i class="fi fi-rs-bullseye-arrow"></i>
+                            <i className="fi fi-rs-bullseye-arrow"></i>
                         </button>
                         <div className="objective_content mision_content">
                             <h1>MISIÓN</h1>
@@ -74,7 +74,7 @@ export function MisionVision() {
                     <div className={`objective_container ${(sectionActive === 'vision')?('vision_container container_active'):('')}`}>
                         <button className="objective_btn vision_icon"
                         onClick={() => handleChangeSection("vision")}>
-                            <i class="fi fi-rs-eye"></i>
+                            <i className="fi fi-rs-eye"></i>
                         </button>
                         <div className="objective_content vision_content">
                             <h1>VISIÓN</h1>

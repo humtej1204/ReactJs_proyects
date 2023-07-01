@@ -56,10 +56,6 @@ export function SelectedNoticia() {
 
             <article>
                 <HtmlParser htmlData={htmlData} />
-                {/* <textarea
-                    value={htmlData}
-                    onChange={e => setHtmlData(e.target.value)}
-                /> */}
             </article>
 
             <div className="news_footer">

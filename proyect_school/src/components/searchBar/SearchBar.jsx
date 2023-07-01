@@ -8,19 +8,20 @@ export function SearchBar({ filterTypeList, sizeWidth = '800px' }) {
         <form className="search_container"
         style={{width: sizeWidth}}>
             <div className="search-input_container">
-                <i class="fi fi-br-caret-down"></i>
+                <i className="fi fi-br-caret-down"></i>
                 <select name="filterType">
-                    {filterTypeList.map((elem, index) => (
-                        (index === 0)?
-                        <option value={elem.key} key={"filterType_" + index} selected>{elem.value}</option>:
-                        <option value={elem.key} key={"filterType_" + index}>{elem.value}</option>
-                    ))}
+                    {filterTypeList.map((elem, index) => {
+                        if (index === 0)
+                            return <option value={elem.key} key={"filterType_" + index} defaultValue>{elem.value}</option>
+                        else
+                            return <option value={elem.key} key={"filterType_" + index}>{elem.value}</option>
+                    })}
                 </select>
                 <input type="text" placeholder="Buscar" />
             </div>
 
             <button className="search_btn">
-                <i class="fi fi-br-search"></i>
+                <i className="fi fi-br-search"></i>
             </button>
         </form>
     );
