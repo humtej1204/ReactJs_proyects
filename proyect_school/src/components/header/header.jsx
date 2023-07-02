@@ -1,5 +1,6 @@
-//import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { PopUpContext } from '../../contexts/contextos/PopUpContext';
 
 /* Images */
 import logo from '../../assets/imgs/components/logo_school.png'
@@ -14,13 +15,20 @@ import sub_nav_icon06 from '../../assets/imgs/components/calendario.svg'
 /* StyleSheet */
 import './header.scss'
 
+/* Components */
+import { SidebarMenu } from "../sidebarMenu/SidebarMenu";
+
 export function Header() {
+  const { openPopup } = useContext(PopUpContext);
+
+  const handleOpenPopup = () => {
+    openPopup(<SidebarMenu />);
+  };
+  
   return (
     <header id="mainLayout_header">
-      <div className="logo">
-        <NavLink to="/">
-          <img src={logo} alt="Alfredo Rebaza Acosta Logo" width="40px" />
-        </NavLink>
+      <NavLink to="/" className="logo">
+        <img src={logo} alt="Alfredo Rebaza Acosta Logo" width="40px" />
 
         <div className="logo-text">
           <font color="#4285F4">ALFR</font>
@@ -31,7 +39,7 @@ export function Header() {
           <font color="#4285F4">ACO</font>
           <font color="#34A853">STA</font>
         </div>
-      </div>
+      </NavLink>
       
       <nav>
         <ul className="main-links">
@@ -111,6 +119,11 @@ export function Header() {
           <img src={intranet_icon} className="icon_img" alt="" />
         </NavLink>
       </nav>
+
+      <button className="btn_menu"
+      onClick={handleOpenPopup}>
+        <i className="fi fi-br-menu-burger"></i>
+      </button>
     </header>
   );
 };

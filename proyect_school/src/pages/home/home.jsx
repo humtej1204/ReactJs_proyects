@@ -59,7 +59,7 @@ export function Home() {
                 <EventsComponent events={events} />
               </div>
 
-              <NavLink to="/institucion">Ver todos</NavLink>
+              <NavLink to="/eventos">Ver todos</NavLink>
             </div>
           </article>
         </section>

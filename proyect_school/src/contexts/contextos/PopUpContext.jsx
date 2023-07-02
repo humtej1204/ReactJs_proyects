@@ -11,6 +11,8 @@ const PopUpProvider = ({ children }) => {
     setPopupContent(prevPopUps => (!prevPopUps)?
     ([content]):
     [...prevPopUps, content]);
+
+    document.body.style.overflow = 'hidden';
   };
 
   const closePopup = () => {
@@ -20,6 +22,8 @@ const PopUpProvider = ({ children }) => {
 
       return currentPopUps;
     });
+
+    document.body.style.overflow = 'auto';
   };
 
   return (

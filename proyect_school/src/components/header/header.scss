@@ -3,7 +3,9 @@
 #mainLayout_header {
     @include elem-flex( space-between );
     @include elem-size( 100%, 80px );
-    background-color: var(--blue);
+    @include responsive(background-color, (
+        ss: white, md: var(--blue)
+    ));
     position: sticky;
     z-index: 100;
     top: 0;
@@ -16,15 +18,29 @@
 /* Logo Section */
 .logo {
     @include elem-flex( center, center );
-    width: 300px;
     background-color: #fff;
     border-radius: 0 0 100px 0;
 
+    img {
+        @include responsive(margin-left, (
+            ss: 1rem, md: 0
+        ));
+    }
+
     .logo-text {
+        display: none;
         margin-left: 15px;
         margin-right: 30px;
         font-family: Amaranth;
         font-size: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+        width: 300px;
+
+        .logo-text {
+            display: inline;
+        }
     }
 }
 
@@ -40,8 +56,11 @@ nav {
 
     .main-links {
         width: 500px;
-        @include elem-flex( space-between );
         color: #fff;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(display, (lg: flex));
 
         li {
             @include elem-flex( center, center );
@@ -139,14 +158,17 @@ nav {
 .btn-intranet {
     @include responsive(width, (xl: 175px));
     @include responsive(padding, (xl: 5px 30px));
-    padding: 10px;
     @include responsive(border-radius, (xl: 50px));
+    display: none;
+    padding: 10px;
     border-radius: 100%;
     color: var(--blue);
     background-color: #fff;
     font-family: 'Anek Devanagari';
     font-weight: bold;
-    @include elem-flex( center );
+    justify-content: center;
+    align-items: center;
+    @include responsive(display, (lg: flex));
 
     &:hover {
         transform: scale(1.05);
@@ -168,5 +190,37 @@ nav {
                 hue-rotate(202deg)
                 brightness(99%)
                 contrast(93%);
+    }
+}
+
+.btn_menu {
+    align-self: center;
+    margin: 0 1rem;
+    width: 45px;
+    height: 45px;
+    padding: 12.5px;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    border: none;
+    background-color: #fff;
+    color: var(--blue);
+    cursor: pointer;
+
+    @include responsive(display, (lg: none,));
+    @include responsive(margin, (md: 0 2rem));
+
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: #f9f9f9;
     }
 }

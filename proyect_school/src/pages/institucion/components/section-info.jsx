@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import { PopUpContext } from '../../../contexts/contextos/PopUpContext';
 
-
 /* Styles */
 import './section-info.scss'
 
 export function SectionInfo({ tittle, contentInfo }) {
   const { closePopup } = useContext(PopUpContext);
 
-  const handleOpenPopup = () => {
+  const handleClosePopup = () => {
     closePopup();
   };
 
@@ -18,7 +17,7 @@ export function SectionInfo({ tittle, contentInfo }) {
         <h1>
           {tittle}
         </h1>
-        <button onClick={handleOpenPopup}>
+        <button onClick={handleClosePopup}>
           <i className="fi fi-rr-cross"></i>
         </button>
       </header>

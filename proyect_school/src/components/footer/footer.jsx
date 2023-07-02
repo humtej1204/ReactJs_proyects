@@ -10,7 +10,7 @@ import './footer.scss'
 export function Footer() {
   return (
     <footer id="main-footer">
-      <section>
+      <section className="container_responsive">
         <div className="section-content main-section">
           <div className="info-sect">
             <ul className="inicio-sect">
@@ -62,90 +62,90 @@ export function Footer() {
             <img src={logo} alt="" />
           </div>
 
-          <ul className="contact-sect">
-            <li>
-              <NavLink to="/contactanos" className="title">Contacto</NavLink>
-              <ul>
-                <div>
-                  <li>
-                    <span className="sub-title">Dirección:</span>
+          <div className="contact-sect">
+            <NavLink to="/contactanos" className="title">Contacto</NavLink>
+            <ul>
+              <div>
+                <li>
+                  <span className="sub-title">Dirección:</span>
+                  <br />
+                  <span className="sub-content">
+                    Av. El Trébol S/N
                     <br />
-                    <span className="sub-content">
-                      Av. El Trébol S/N
-                      <br />
-                      Urb. El Trébol - Los Olivos
-                    </span>
-                  </li>
-                  <li>
-                    <span className="sub-title">Teléfonos:</span>
+                    Urb. El Trébol - Los Olivos
+                  </span>
+                </li>
+                <li>
+                  <span className="sub-title">Teléfonos:</span>
+                  <br />
+                  <span className="sub-content">
+                    5332463
+                  </span>
+                </li>
+              </div>
+              <div>
+                <li>
+                  <span className="sub-title">Horarios de Atención:</span>
+                  <br />
+                  <span className="sub-content">
+                    8:00 am - 12:00 pm
                     <br />
-                    <span className="sub-content">
-                      5332463
-                    </span>
-                  </li>
-                </div>
-                <div>
-                  <li>
-                    <span className="sub-title">Horarios de Atención:</span>
-                    <br />
-                    <span className="sub-content">
-                      8:00 am - 12:00 pm
-                      <br />
-                      2:00 am - 6:00 pm
-                    </span>
-                  </li>
-                  <li>
-                    <span className="sub-title">Correo:</span>
-                    <br />
-                    <span className="sub-content">
-                      ie.alfredorebaza@gmail.com
-                    </span>
-                  </li>
-                </div>
-              </ul>
-            </li>
-          </ul>
+                    2:00 am - 6:00 pm
+                  </span>
+                </li>
+                <li>
+                  <span className="sub-title">Correo:</span>
+                  <br />
+                  <span className="sub-content">
+                    ie.alfredorebaza@gmail.com
+                  </span>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section>
-        <div className="section-content social-sect">
-          <ul className="social-icons">
-            <li>
-              <a href="https://www.facebook.com/iealfredorebazacostaoficial" rel="noreferrer" target="_blank">
-                <i className="fi fi-brands-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
-                <i className="fi fi-brands-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/" rel="noreferrer" target="_blank">
-                <i className="fi fi-brands-whatsapp"></i>
-              </a>
-            </li>
-          </ul>
-          
-          <ul>
-            <li>
-              <a href="/" className="sub-title" rel="noreferrer" target="_blank">
-                Reglamento Interno
-              </a>
-            </li>
-            <li>
-              <a href="/" className="sub-title" rel="noreferrer" target="_blank">
-                Certificado de Estudios
-              </a>
-            </li>
-          </ul>
+        <div className="container_responsive">
+          <div className="social-sect section-content">
+            <ul className="social-icons">
+              <li>
+                <a href="https://www.facebook.com/iealfredorebazacostaoficial" rel="noreferrer" target="_blank">
+                  <i className="fi fi-brands-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" rel="noreferrer" target="_blank">
+                  <i className="fi fi-brands-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/" rel="noreferrer" target="_blank">
+                  <i className="fi fi-brands-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+            
+            <ul className="important_docs">
+              <li>
+                <a href="/" className="sub-title" rel="noreferrer" target="_blank">
+                  Reglamento Interno
+                </a>
+              </li>
+              <li>
+                <a href="/" className="sub-title" rel="noreferrer" target="_blank">
+                  Certificado de Estudios
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section className="container_responsive">
         <div className="section-content sponsor-section">
-          <span>Proyectos de HaruHumtej</span>
+          <span className="main_text">Proyectos de HaruHumtej</span>
           <ul>
             <li>
               <a href="http://wild-harumon.tech/" target="_blank" rel="noreferrer">

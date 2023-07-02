@@ -12,7 +12,6 @@ import { ScrollToTop } from './util/ScrollToTop';
 /* Components */
 import { Header } from './components/header/header'
 import { Footer } from "./components/footer/footer";
-import { Overlay } from "./components/overlay/Overlay";
 
 /* Pages Views */
 import { Home } from "./pages/home/home";
@@ -31,32 +30,31 @@ import { NotFoundPage } from "./pages/errorPages/notFound"
 export function App() {
   return (
     <Fragment>
-      <AppContextProvider>
-        <Overlay></Overlay>
         
         <BrowserRouter>
-          <ScrollToTop />
-          <Header />
-          
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Navigate to="/" />} />
-            <Route path="/matricula" element={<Matricula />} />
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/datosInstitucionales" element={<InstitutionData />} />
-            <Route path="/misionVision" element={<MisionVision />} />
-            <Route path="/institucion" element={<Institucion />} />
-            <Route path="/noticias" element={<Noticias />} />
-            <Route path="/noticias/:newsId" element={<SelectedNoticia />} />
-            <Route path="/eventos" element={<Eventos />} />
-            <Route path="/eventos/:eventId" element={<SelectedEvento />} />
-            <Route path="/contactanos" element={<Contactanos />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+          <AppContextProvider>
+            <ScrollToTop />
+            <Header />
+            
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Navigate to="/" />} />
+              <Route path="/matricula" element={<Matricula />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/datosInstitucionales" element={<InstitutionData />} />
+              <Route path="/misionVision" element={<MisionVision />} />
+              <Route path="/institucion" element={<Institucion />} />
+              <Route path="/noticias" element={<Noticias />} />
+              <Route path="/noticias/:newsId" element={<SelectedNoticia />} />
+              <Route path="/eventos" element={<Eventos />} />
+              <Route path="/eventos/:eventId" element={<SelectedEvento />} />
+              <Route path="/contactanos" element={<Contactanos />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
 
-          <Footer />
+            <Footer />
+          </AppContextProvider>
         </BrowserRouter>
-      </AppContextProvider>
     </Fragment>
   );
 }

@@ -2,9 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 
-* {
-    transition: all ease-in-out 0.25s;
-}
+// * {
+//     transition: all ease 0.25s;
+// }
 
 *,
 ::after,
@@ -29,6 +29,7 @@ li {
 
 body {
     font-family: Inter;
+    width: 100vw;
 
     &::-webkit-scrollbar {
         width: 7.5px;

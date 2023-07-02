@@ -1,0 +1,142 @@
+#sidebar {
+    width: 100%;
+    height: 100%;
+    max-width: 576px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 1rem;
+
+    .sidebar_header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo_cont {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: Amaranth;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .btn_close {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #303030;
+            border-radius: 100%;
+            border: none;
+            background-color: transparent;
+
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    hr {
+        width: 100%;
+        border: #efefef 0.5px solid;
+        margin: 0.75rem 0;
+    }
+
+    .links_container {
+        width: 100%;
+        height: calc(100% - 50px - 2rem);
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .sidebar_fst_sect {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        img {
+            height: 1.2rem;
+            aspect-ratio: 1;
+        }
+
+        .main_link, .sub_sect {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-family: Inter;
+            color: #303030 !important;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .main_link {
+            gap: 1rem;
+        }
+
+        .sub_sect {
+            flex-direction: column;
+            width: 95%;
+            margin-left: auto;
+            margin-right: 0;
+            transition: all ease;
+
+            a {
+                color: #303030 !important;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                font-weight: 400;
+                display: flex;
+                gap: 1rem;
+
+                &:hover {
+                    background-color: #f6f6f6;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .end_sect {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: 0;
+        
+        .intranet_link {
+            font-family: Inter;
+            color: #303030 !important;
+            font-weight: 600;
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background-color: #f6f6f6;
+                font-weight: 600;
+            }
+        }
+    }
+}
