@@ -27,9 +27,10 @@ li {
     height: 80px;
 }
 
-body {
+body, #root {
     font-family: Inter;
     width: 100vw;
+    position: relative;
 
     &::-webkit-scrollbar {
         width: 7.5px;

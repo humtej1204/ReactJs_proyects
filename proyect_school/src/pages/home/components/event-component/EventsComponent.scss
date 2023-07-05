@@ -8,20 +8,24 @@
     .event_main_container {
         width: 100%;
         display: flex;
+        flex-direction: column;
         transition: all ease 2s;
 
-        &>img {
-            width: 50%;
+        .selected_item_img, .event_data_container {
+            width: 100%
+        }
+
+        .selected_item_img {
             aspect-ratio: 16/9;
             object-fit: cover;
             opacity: 0; transform: translateX(-50px);
         }
 
         .event_data_container {
-            width: 50%;
-            padding: 1rem 2rem;
+            padding: 1rem 0;
             display: flex;
             flex-direction: column;
+            min-height: 275px;
 
             h2 {
                 font-size: 1.5rem;
@@ -38,7 +42,7 @@
             }
 
             p {
-                margin-top: 1.5rem;
+                margin: 1.25rem 0;
                 font-size: 0.9rem;
                 opacity: 0; transform: translateY(0.5rem);
             }
@@ -56,7 +60,7 @@
     }
 
     .event_data_animation {
-        img {opacity: 1; transform: translateX(0);}
+        .selected_item_img {opacity: 1; transform: translateX(0);}
         h2 {opacity: 1 !important; transform: translateY(0) !important;}
         span {opacity: 1 !important; transform: translateY(0) !important;}
         p {opacity: 1 !important; transform: translateY(0) !important;}
@@ -66,9 +70,18 @@
     .events_container {
         width: 100%;
         display: flex;
+        overflow-x: auto;
+
+        .events_carrusel_container {
+            width: 100%;
+            min-width: calc(125px * 6);
+            display: flex;
+            overflow-x: auto;
+        }
 
         img {
             width: calc(100% / 6);
+            min-width: 125px;
             aspect-ratio: 4/3;
             object-fit: cover;
             cursor: pointer;
@@ -82,6 +95,23 @@
 
         .img_noSelected {
             filter: brightness(30%);
+        }
+    }
+
+    @media (min-width: 768px) {
+    }
+
+    @media (min-width: 1024px) {
+        .event_main_container {
+            flex-direction: row;
+
+            .event_data_container {
+                padding: 1rem 2rem;
+            }
+
+            .selected_item_img, .event_data_container {
+                width: 50%
+            }
         }
     }
 }

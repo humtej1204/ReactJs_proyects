@@ -23,7 +23,8 @@ export function EventsComponent({ events }) {
     return (
         <div className='eventsItems'>
             <div id="mainEvent" className="event_main_container">
-                <img src={mainEvent.img} alt="" />
+                <img src={mainEvent.img} alt={mainEvent.eventName}
+                className="selected_item_img"/>
                 <section className="event_data_container">
                     <span>{mainEvent.creation_date}</span>
                     <h2>{mainEvent.eventName}</h2>
@@ -36,13 +37,16 @@ export function EventsComponent({ events }) {
             </div>
 
             <div className="events_container">
-                {events.map((item, index) => (
-                    <img className={(selected === index)?('img_selected'):('img_noSelected')}
-                        onClick={() => changeMainInfo(index)}
-                        src={item.img}
-                        key={"index_event_item" + index}
-                    />
-                ))}
+                <div className="events_carrusel_container">
+                    {events.map((item, index) => (
+                        <img className={(selected === index)?('img_selected'):('img_noSelected')}
+                            onClick={() => changeMainInfo(index)}
+                            src={item.img}
+                            key={"index_event_item" + index}
+                            alt={item.eventName}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
