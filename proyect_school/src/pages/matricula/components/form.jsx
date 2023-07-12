@@ -44,13 +44,13 @@ export function MatriculaForm() {
                     </label>
                     <input type="text" name="email" placeholder="Correo Electrónico" />
                 </div>
-                <div className="inputForm thirdGrid">
+                <div className="inputForm halfGridLeft">
                     <label>
                         Telefono / Celular:
                     </label>
                     <input type="text" name="cel" placeholder="Telefono / Celular" />
                 </div>
-                <div className="inputForm thirdGrid">
+                <div className="inputForm halfGridRight">
                     <label>
                         Grado de Selección
                     </label>
@@ -59,11 +59,19 @@ export function MatriculaForm() {
                         <option value="1">1° Grado</option>
                         <option value="2">2° Grado</option>
                         <option value="3">3° Grado</option>
-                        <option value="3">4° Grado</option>
-                        <option value="3">5° Grado</option>
+                        <option value="4">4° Grado</option>
+                        <option value="5">5° Grado</option>
                     </select>
                 </div>
-                <input type="submit" value="Enviar" className="button"/>
+                
+                <div className="check-terms oneGrid">
+                    <span>
+                        <input type="checkbox" id="policy" />
+                        Acepto las <a href="#">Políticas de uso de datos.</a>
+                    </span>
+                </div>
+
+                <button className="send_btn oneGrid">Enviar</button>
             </form>
         </div>
     );

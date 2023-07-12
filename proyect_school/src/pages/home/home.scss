@@ -106,7 +106,8 @@
         gap: 40px;
 
         &>h1 {
-            width: 80%;
+            max-width: 800px;
+            @include responsive(font-size, (ss: 1.5rem, md: 2.5rem));
             font-style: normal;
             font-weight: 800;
             color: #FFFFFF;
