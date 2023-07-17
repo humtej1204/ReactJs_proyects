@@ -40,12 +40,12 @@ export function Matricula() {
           <MatriculaForm />
         </div>
         <section className="content-main">
-          <article className="offeredEducation">
-            <div className="left-side">
+          <article className="offeredEducation container_responsive">
+            <div className="image_container">
               <img src={formacionSemanal} alt="Formacion_semanal" />
             </div>
 
-            <div className="right-side">
+            <div className="article_container">
               <h1>
                 <font color="#4285F4">Pro</font>
                 <font color="#34A853">pu</font>
@@ -67,37 +67,39 @@ export function Matricula() {
           </article>
 
           <article className="morePropEdu">
-            <h1>¿Quieres conocer más sobre nuestra propuesta educativa?</h1>
-            <ul className="proposal-list">
-              <li>
-                <i className="fi fi-rr-chart-histogram"></i>
-                <span>
-                  Docentes<br />Capacitados
-                </span>
-              </li>
-              <li>
-                <i className="fi fi-rr-list-check"></i>
-                <span>
-                  Seguimiento<br />Academico
-                </span>
-              </li>
-              <li>
-                <i className="fi fi-rr-users"></i>
-                <span>
-                  Escuela para<br />padres
-                </span>
-              </li>
-              <li>
-                <i className="fi fi-rr-globe"></i>
-                <span>
-                  Plataforma<br />Educativa
-                </span>
-              </li>
-            </ul>
-            <a href="/home" className="btn-see_more">
-              Más Información
-              <i className="fi fi-rr-arrow-right"></i>
-            </a>
+            <div className="morePropEdu_container container_responsive">
+              <h1>¿Quieres conocer más sobre nuestra propuesta educativa?</h1>
+              <ul className="proposal-list">
+                <li>
+                  <i className="fi fi-rr-chart-histogram"></i>
+                  <span>
+                    Docentes<br />Capacitados
+                  </span>
+                </li>
+                <li>
+                  <i className="fi fi-rr-list-check"></i>
+                  <span>
+                    Seguimiento<br />Academico
+                  </span>
+                </li>
+                <li>
+                  <i className="fi fi-rr-users"></i>
+                  <span>
+                    Escuela para<br />padres
+                  </span>
+                </li>
+                <li>
+                  <i className="fi fi-rr-globe"></i>
+                  <span>
+                    Plataforma<br />Educativa
+                  </span>
+                </li>
+              </ul>
+              <a href="/home" className="btn-see_more">
+                Más Información
+                <i className="fi fi-rr-arrow-right"></i>
+              </a>
+            </div>
           </article>
 
           <article className="moreAbout">

@@ -1,7 +1,14 @@
 @import 'src/index.scss';
 
-// main#matricula {
-// }
+#matricula {
+    .content-main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 .banner-form {
     @include elem-size( 100%, 900px );
@@ -16,61 +23,80 @@
 
 .offeredEducation {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 10px;
 
-    .left-side, .right-side {
-        width: 50%;
-    }
-
-    .left-side {
+    .image_container {
+        width: 100%;
+        max-height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(../../assets/imgs/matricula/education_proposal_bg.png);
-        background-repeat: no-repeat;
-        background-origin: border-box;
-        background-position: center;
-        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
 
         img {
-            width: 75%;
-            aspect-ratio: 4/3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
-    .right-side {
+    .article_container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 75px 50px;
 
         h1 {
-            width: fit-content;
-            font-size: 2.25rem;
             font-weight: 900;
             text-transform: uppercase;
-            padding-bottom: 0.8rem;
-            border-bottom: 0.2rem solid #666;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding: 5vh 10px;
+        
+        .image_container {
+            width: 50%;
+            height: 400px;
+            max-height: none;
+        }
+    
+        .article_container {
+            width: 50%;
+            padding: 1.75rem;
         }
     }
 }
 
 .morePropEdu {
+    width: 100%;
     padding: 50px 0;
     background-color: var(--yellow);
     @include elem-flex( center, center);
-    flex-direction: column;
-    gap: 40px;
     color: white;
+
+    .morePropEdu_container {
+        @include elem-flex( center, center);
+        flex-direction: column;
+        gap: 40px;
+    }
 
     h1 {
         font-size: 1.75rem;
+        text-align: center;
     }
 
     .proposal-list {
-        @include elem-flex();
-        justify-content: center;
-        gap: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1.5rem;
         font-size: 1.25rem;
         font-weight: 600;
 
@@ -88,6 +114,7 @@
 
     .btn-see_more {
         width: 250px;
+        height: 50px;
         gap: 1.5rem;
         transition-duration: 0.75s;
 
@@ -103,6 +130,14 @@
             0% {transform: translateX(0.5rem);}
             50% {transform: translateX(-0.5rem);}
             100% {transform: translateX(0.5rem);}
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .proposal-list {
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
         }
     }
 }
