@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useState, useEffect } from "react";
 
 /* Components */
 import { MatriculaForm } from "./components/form";
@@ -32,6 +32,36 @@ function OferedItem({img, tittle, description}) {
 }
 
 export function Matricula() {
+  const [moreCard, setMoreCard] = useState(0);
+  const [elemsPaginator, setElemsPaginator] = useState(0);
+  const sliderRef = useRef();
+
+  const goToCardIndex = (index) => {
+    setMoreCard(index);
+    sliderRef.current.scrollTo({
+      top: 0,
+      left: 325 * index,
+      behavior: 'smooth'
+    });
+  }
+
+  useEffect(() => {
+    function handleWindowResize() {
+        if (sliderRef.current.offsetWidth < 625)
+          setElemsPaginator(3);
+        else
+          setElemsPaginator(2);
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+    
+    handleWindowResize();
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+});
+
   return (
     <Fragment>
       <main id="matricula">
@@ -102,19 +132,33 @@ export function Matricula() {
             </div>
           </article>
 
-          <article className="moreAbout">
+          <article className="moreAbout container_responsive">
             <h1>
               Conoce un poco de la educación que ofrecemos
             </h1>
-            <div className="containerItems">
-              {oferedInfo.map((item, index) => (
-                <OferedItem
-                  img={item.img}
-                  tittle={item.tittle}
-                  description={item.description}
-                  key={index}
-                />
-              ))}
+            
+            <div className="container_cards"
+            ref={sliderRef}>
+              <div className="containerItems">
+                {oferedInfo.map((item, index) => (
+                  <OferedItem
+                    img={item.img}
+                    tittle={item.tittle}
+                    description={item.description}
+                    key={index}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="cards_paginator">
+                  {oferedInfo.slice(0, elemsPaginator)
+                  .map((item, index) => (
+                    <div className={`paginator_indicator ${(index === moreCard)?('indicator_active'):('')}`}
+                    key={index} onClick={() => goToCardIndex(index)}>
+                      &nbsp;
+                    </div>
+                  ))}
             </div>
           </article>
         </section>

@@ -23,7 +23,7 @@ export function OpinionComponent({ opinions }) {
             if (refCont.current.offsetWidth <= 1440)
                 setWidthCont(refCont.current.offsetWidth);
             else setWidthCont(1440);
-            setElemPerPage(parseInt(widthCont / 275));
+            setElemPerPage(parseInt(widthCont / 300));
         }
 
         window.addEventListener('resize', handleWindowResize);
