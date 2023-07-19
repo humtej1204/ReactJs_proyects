@@ -40,17 +40,18 @@ export function Matricula() {
     setMoreCard(index);
     sliderRef.current.scrollTo({
       top: 0,
-      left: 325 * index,
+      left: 320 * index,
       behavior: 'smooth'
     });
   }
 
   useEffect(() => {
     function handleWindowResize() {
-        if (sliderRef.current.offsetWidth < 625)
-          setElemsPaginator(3);
-        else
-          setElemsPaginator(2);
+      const containerSize = sliderRef.current.offsetWidth;
+      const cardSize = 320;
+
+      if (containerSize / cardSize > 1) setElemsPaginator(oferedInfo.length - 1);
+      else setElemsPaginator(oferedInfo.length);
     }
 
     window.addEventListener('resize', handleWindowResize);
@@ -139,7 +140,8 @@ export function Matricula() {
             
             <div className="container_cards"
             ref={sliderRef}>
-              <div className="containerItems">
+              <div className="containerItems"
+              style={{width: `${(oferedInfo.length * 300) + ((oferedInfo.length - 1) * 20)}`}}>
                 {oferedInfo.map((item, index) => (
                   <OferedItem
                     img={item.img}

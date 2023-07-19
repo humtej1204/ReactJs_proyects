@@ -88,6 +88,7 @@
     }
 
     h1 {
+        padding: 0 10px;
         font-size: 1.75rem;
         text-align: center;
     }
@@ -172,9 +173,8 @@
     }
 
     .containerItems {
-        width: 950px;
         @include elem-flex(center, center);
-        gap: 1.5rem;
+        gap: 20px;
         transition-duration: 0.5s;
     }
 
@@ -198,11 +198,7 @@
 
     @media (min-width: 768px) {
         .container_cards {
-            width: 625px;
-        }
-
-        .containerItems {
-            width: 1000px;
+            width: 650px;
         }
     }
 
