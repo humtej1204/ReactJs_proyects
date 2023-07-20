@@ -45,6 +45,14 @@ export function Matricula() {
     });
   }
 
+  function handleContainerScroll () {
+    const xPosition = sliderRef.current.scrollLeft;
+    const index = Math.round(xPosition / 320);
+
+    setMoreCard(index);
+    console.log(xPosition)
+  }
+
   useEffect(() => {
     function handleWindowResize() {
       const containerSize = sliderRef.current.offsetWidth;
@@ -61,7 +69,7 @@ export function Matricula() {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-});
+  });
 
   return (
     <Fragment>
@@ -138,7 +146,7 @@ export function Matricula() {
               Conoce un poco de la educación que ofrecemos
             </h1>
             
-            <div className="container_cards"
+            <div className="container_cards" onScroll={() => handleContainerScroll()}
             ref={sliderRef}>
               <div className="containerItems"
               style={{width: `${(oferedInfo.length * 300) + ((oferedInfo.length - 1) * 20)}`}}>

@@ -164,8 +164,8 @@
     .container_cards {
         width: 300px;
         @include elem-flex(flex-start, center);
-        overflow-x: hidden;
-        // scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
 
         &::-webkit-scrollbar {
             display: none;
@@ -229,7 +229,7 @@
     padding: 25px 15px;
     font-size: 0.9rem;
     border-radius: 10px;
-    // scroll-snap-align: center;
+    scroll-snap-align: start;
 
     .img-frame {
         width: 150px;

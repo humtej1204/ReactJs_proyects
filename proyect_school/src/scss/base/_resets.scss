@@ -27,13 +27,10 @@ li {
     height: 80px;
 }
 
-body {height: 100vh;}
-
-#root {height: 100%;}
-
 body, #root {
     font-family: Inter;
     width: 100vw;
+    height: 100%;
     position: relative;
 
     &::-webkit-scrollbar {
