@@ -1,15 +1,43 @@
 import React, { useState } from "react";
 
+/* Components */
+import {BannerOverlay} from './components/BannerOverlay';
 
 /* Styles */
 import './nosotros.scss';
+import './ExpansibleReazon.scss';
 
 /* Images */
-import IMG01 from '../../assets/imgs/home/IMG01.jpg';
 import whoWeAre from '../../assets/imgs/nosotros/IMG05_3.png';
 
 /* Info */
 import { servicesData } from "./nosotros-info";
+
+function ExpansibleReazon({data}) {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpand = () => {
+    const expand = !expanded;
+    setExpanded(expand);
+  }
+
+  return (
+    <div id="reazon_elem"
+    onClick={handleExpand}>
+      <header>
+        <h3>{data.tittle}</h3>
+        <button className="expand_btn">
+          {(expanded)?
+            (<i className="fi fi-rr-angle-small-up"></i>):
+            (<i className="fi fi-rr-angle-small-down"></i>)
+          }
+        </button>
+      </header>
+
+      {expanded && <p>{data.content}</p>}
+    </div>
+  );
+}
 
 export function Nosotros() {
   const [animate, setAnimate] = useState(false);
@@ -26,48 +54,53 @@ export function Nosotros() {
 
   return (
     <main id="nosotros-sect">
-      <section id="nosotros-main_sect">
-        <div className="banner_overlay">
-          Puntualidad<br />
-          Disciplina<br />
-          Estudio
-        </div>
-        <img src={IMG01} alt="school" />
+      <section className="nosotros-main_sect">
+        <BannerOverlay />
       </section>
 
-      <section className="nosotros-container">
-        <article id="nosotros-info_whoWeAre">
-          <div className="nosotros-info_leftSect">
-            <h1>¿Quiénes somos?</h1>
+      <section className="nosotros_whoWeAre">
+        <article className="whoWeAre_container container_responsive">
+          <div className="whoWeAre_leftSect">
+            <h1>Quiénes somos</h1>
 
-            <p>
-              Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus. Sed tincidunt turpis odio, quis scelerisque dolor sollicitudin nec. Aliquam et justo et ex pretium vestibulum eu eget neque. Nam sollicitudin leo quis risus vehicula aliquam. Phasellus non enim magna.
-            </p>
-          </div>
+            <h2>
+              Un Legado de Excelencia
+            </h2>
 
-          <div className="image_container">
-            <img src={whoWeAre} alt="" />
-          </div>
-        </article>
-
-        <article id="nosotros-info_whyWe">
-          <div className="left-section">
-            <h1>¿Por qué elejirnos?</h1>
             <p>
               Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus.
             </p>
           </div>
 
-          <div className="right-section">
-            {reazons.map((elem, index) => (
-              <div className="reazon-elem" key={'reazon_' + index}>
-                <h3>{elem.tittle}</h3>
-                <p>{elem.reazon}</p>
-              </div>
-            ))}
+          <div className="whoWeAre_imgCont">
+            <img src={whoWeAre} alt="" />
           </div>
         </article>
+      </section>
 
+      <section className="nosotros_whyWe">
+        <div className="whyWe_container container_responsive">
+          <article className="whyWe_leftSect">
+            <h1>Elige Excelencia<br />Educativa</h1>
+            <p>
+              Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus.
+            </p>
+            <button>
+              
+            </button>
+          </article>
+
+          <div className="whyWe_rightSect">
+            {reazons.map((elem, index) => (
+              <ExpansibleReazon
+              data={elem}
+              key={'reazon_' + index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
         <article id="nosotros-services_sect">
           <h1>
             Programas y Servicios que ofrecemos a los Alumnos
@@ -115,18 +148,18 @@ export function Nosotros() {
 const reazons = [
   {
     tittle: 'Razon número uno',
-    reazon: 'Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus.'
+    content: 'Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus.'
   },
   {
     tittle: 'Razon número dos',
-    reazon: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
+    content: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
   },
   {
     tittle: 'Razon número tres',
-    reazon: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
+    content: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
   },
   {
     tittle: 'Razon número cuatro',
-    reazon: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
+    content: 'Pellentesque tempor metus a odio sollicitudin, ac condimentum nunc tincidunt. Nam eu magna aliquet est malesuada laoreet in at turpis.'
   },
 ]

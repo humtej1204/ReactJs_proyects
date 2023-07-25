@@ -1,0 +1,32 @@
+#nosotros_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    overflow: hidden;
+
+    .banner_overlay {
+        position: absolute;
+        left: 0;
+        background-color: rgba(#4285F4, 0.5);
+        width: 60%;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
