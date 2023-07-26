@@ -16,14 +16,20 @@
 
         h3 {width: 80%;}
 
-        .expand_btn {
+        .expand_btn,
+        .expand_btn>i {
             width: 1.5rem;
             height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expand_btn {
             border: none;
             border-radius: 100%;
             background-color: transparent;
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.2rem;
             color: var(--yellow);
             cursor: pointer;
 

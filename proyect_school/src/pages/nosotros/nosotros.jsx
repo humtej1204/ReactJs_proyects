@@ -27,8 +27,8 @@ function ExpansibleReazon({data}) {
         <h3>{data.tittle}</h3>
         <button className="expand_btn">
           {(expanded)?
-            (<i className="fi fi-rr-angle-small-up"></i>):
-            (<i className="fi fi-rr-angle-small-down"></i>)
+            (<i className="fi fi-br-angle-small-up"></i>):
+            (<i className="fi fi-br-angle-small-down"></i>)
           }
         </button>
       </header>
