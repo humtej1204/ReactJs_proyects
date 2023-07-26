@@ -8,7 +8,7 @@ import './nosotros.scss';
 import './ExpansibleReazon.scss';
 
 /* Images */
-import whoWeAre from '../../assets/imgs/nosotros/IMG05_3.png';
+import whoWeAre from '../../assets/imgs/nosotros/school001.png';
 
 /* Info */
 import { servicesData } from "./nosotros-info";
@@ -22,9 +22,8 @@ function ExpansibleReazon({data}) {
   }
 
   return (
-    <div id="reazon_elem"
-    onClick={handleExpand}>
-      <header>
+    <div id="reazon_elem">
+      <header onClick={handleExpand}>
         <h3>{data.tittle}</h3>
         <button className="expand_btn">
           {(expanded)?
@@ -60,12 +59,8 @@ export function Nosotros() {
 
       <section className="nosotros_whoWeAre">
         <article className="whoWeAre_container container_responsive">
-          <div className="whoWeAre_leftSect">
+          <div className="whoWeAre_mainContSect">
             <h1>Quiénes somos</h1>
-
-            <h2>
-              Un Legado de Excelencia
-            </h2>
 
             <p>
               Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus.
@@ -73,7 +68,38 @@ export function Nosotros() {
           </div>
 
           <div className="whoWeAre_imgCont">
-            <img src={whoWeAre} alt="" />
+            <img className="mainImg"
+            src={whoWeAre} alt="" />
+          </div>
+
+          <div className="whoWeAre_contSect">
+            <div className="paragraph_sect">
+              <h2>
+                Un Legado de Excelencia
+              </h2>
+
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </p>
+
+              <p>
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+              </p>
+            </div>
+
+            <div className="paragraph_sect">
+              <h2>
+                El Equipo que Hace Posible Nuestro Éxito
+              </h2>
+
+              <p>
+                Cras a justo diam. Duis scelerisque vestibulum semper. Quisque molestie lacus elit, id posuere tortor lobortis at. Mauris pretium tellus nec porttitor finibus. Curabitur quis aliquam lorem. Nunc erat lectus, scelerisque nec enim eu, facilisis convallis tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer a metus vitae augue luctus lobortis. In eget libero libero. Proin erat risus, maximus ut mi non, vulputate scelerisque urna. In rhoncus id dui eu vulputate. Aenean faucibus a risus et tempus. Donec ut semper nulla. Pellentesque tristique est et tellus venenatis vulputate. Etiam a ex suscipit, ornare tellus vitae, fermentum lectus.
+              </p>
+
+              <p>
+                Vivamus placerat ac metus eu condimentum. Phasellus vitae auctor magna. Sed ac est eu felis hendrerit pretium. Duis finibus luctus interdum. Aliquam euismod vel tortor vel bibendum. Ut vitae ornare nunc, ultricies lobortis diam. Vivamus sed lorem elementum, tempus sapien in, iaculis eros. Ut porta mattis cursus. Nam non convallis dui, eu varius lectus. Nam nulla dolor, efficitur hendrerit lorem vitae, ultricies hendrerit lacus.
+              </p>
+            </div>
           </div>
         </article>
       </section>
@@ -100,8 +126,8 @@ export function Nosotros() {
         </div>
       </section>
 
-      <section>
-        <article id="nosotros-services_sect">
+      <section className="nosotros_services">
+        <article className="services_container container_responsive">
           <h1>
             Programas y Servicios que ofrecemos a los Alumnos
           </h1>
@@ -109,8 +135,8 @@ export function Nosotros() {
           <div className="container_selector">
             <div className={`selected_elem ${animate?('fadeLeft'):('')}`}>
               <img src={selectData.image} alt="" />
-              <div className="selected_elem-container">
-                <h3>Profesores a cargo:</h3>
+              <div className="selected_elemCont">
+                <b>Profesores a cargo:</b>
                 <span>
                   {selectData.inCharge}
                 </span>
