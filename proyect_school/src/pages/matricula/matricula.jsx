@@ -1,8 +1,10 @@
-import React, { Fragment, useRef, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 
 /* Components */
 import { MatriculaForm } from "./components/form";
 import { FadeSlider } from "./components/fadeSlider";
+import { ComponentSlider } from "../../components/componentSlider/ComponentSlider";
+
 
 /* Info */
 import { oferedInfo } from "./oferedIfno"
@@ -13,15 +15,15 @@ import './matricula.scss'
 /* Images */
 import formacionSemanal from "../../assets/imgs/matricula/formacion_semanal.png";
 
-function OferedItem({img, tittle, description}) {
+function OferedItem({data}) {
   return (
     <div className="card-ofered">
       <div className="img-frame">
-        <img src={img} alt="" />
+        <img src={data.img} alt="" />
       </div>
 
-      <h2>{tittle}</h2>
-      <p>{description}</p>
+      <h2>{data.tittle}</h2>
+      <p>{data.description}</p>
       
       <a href="/home" className="btn-see_more">
         Ver mas
@@ -32,44 +34,6 @@ function OferedItem({img, tittle, description}) {
 }
 
 export function Matricula() {
-  const [moreCard, setMoreCard] = useState(0);
-  const [elemsPaginator, setElemsPaginator] = useState(0);
-  const sliderRef = useRef();
-
-  const goToCardIndex = (index) => {
-    setMoreCard(index);
-    sliderRef.current.scrollTo({
-      top: 0,
-      left: 320 * index,
-      behavior: 'smooth'
-    });
-  }
-
-  function handleContainerScroll () {
-    const xPosition = sliderRef.current.scrollLeft;
-    const index = Math.round(xPosition / 320);
-
-    setMoreCard(index);
-  }
-
-  useEffect(() => {
-    function handleWindowResize() {
-      const containerSize = sliderRef.current.offsetWidth;
-      const cardSize = 320;
-
-      if (containerSize / cardSize > 1) setElemsPaginator(oferedInfo.length - 1);
-      else setElemsPaginator(oferedInfo.length);
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-    
-    handleWindowResize();
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  });
-
   return (
     <Fragment>
       <main id="matricula">
@@ -145,30 +109,7 @@ export function Matricula() {
               Conoce un poco de la educación que ofrecemos
             </h1>
             
-            <div className="container_cards" onScroll={() => handleContainerScroll()}
-            ref={sliderRef}>
-              <div className="containerItems"
-              style={{width: `${(oferedInfo.length * 300) + ((oferedInfo.length - 1) * 20)}`}}>
-                {oferedInfo.map((item, index) => (
-                  <OferedItem
-                    img={item.img}
-                    tittle={item.tittle}
-                    description={item.description}
-                    key={index}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="cards_paginator">
-                  {oferedInfo.slice(0, elemsPaginator)
-                  .map((item, index) => (
-                    <div className={`paginator_indicator ${(index === moreCard)?('indicator_active'):('')}`}
-                    key={index} onClick={() => goToCardIndex(index)}>
-                      &nbsp;
-                    </div>
-                  ))}
-            </div>
+            <ComponentSlider data={oferedInfo} RefComponent={OferedItem} />
           </article>
         </section>
       </main>

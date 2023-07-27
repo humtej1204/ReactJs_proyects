@@ -1,0 +1,50 @@
+#cardSliderContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .slider_container {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .cards_container {
+        width: auto;
+        display: flex;
+        gap: 20px;
+
+        .card_component {
+            scroll-snap-align: start;
+            width: 300px;
+        }
+    }
+
+    .cardSliderIndicator {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 25px 0;
+
+        .slider_indicator {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 100%;
+            background-color: rgba(#666, 0.5);
+            cursor: pointer;
+        }
+
+        .indicator_active {
+            background-color: rgba(#333, 0.75);
+        }
+    }
+}
