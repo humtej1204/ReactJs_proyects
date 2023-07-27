@@ -39,6 +39,7 @@ export function ComponentSlider({data, RefComponent}) {
         const updateSliderData = () => {
             let elmPerPage = 0;
             let contSize = sliderContRef.current.offsetWidth;
+            let elmSize = (contSize >= 350)?(320):(300);
             let elmSep = 20;
     
             elmPerPage = parseInt(contSize / elmSize);
@@ -59,6 +60,7 @@ export function ComponentSlider({data, RefComponent}) {
             contSize = (elmPerPage * (elmSize + elmSep)) - elmSep;
     
             setContSize(contSize);
+            setElmSize(elmSize);
             setElmSep(elmSep);
             setElmPerPage(elmPerPage);
             updateElemsPaginator(elmPerPage);

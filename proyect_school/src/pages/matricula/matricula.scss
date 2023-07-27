@@ -184,7 +184,7 @@
 }
 
 .card-ofered {
-    width: 300px;
+    width: 100%;
     height: 450px;
     @include elem-flex(flex-start, center);
     flex-direction: column;

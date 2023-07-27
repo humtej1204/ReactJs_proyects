@@ -10,6 +10,7 @@
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        padding: 20px 0;
     
         &::-webkit-scrollbar {
             display: none;
@@ -23,7 +24,7 @@
 
         .card_component {
             scroll-snap-align: start;
-            width: 300px;
+            padding: 10px;
         }
     }
 
