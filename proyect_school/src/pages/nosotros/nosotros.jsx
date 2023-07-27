@@ -107,7 +107,7 @@ export function Nosotros() {
       <section className="nosotros_whyWe">
         <div className="whyWe_container container_responsive">
           <article className="whyWe_leftSect">
-            <h1>Elige Excelencia<br />Educativa</h1>
+            <h1>Elige Excelencia Educativa</h1>
             <p>
               Maecenas quis elit a leo sollicitudin auctor. Morbi a lobortis enim. Vestibulum ante tortor, malesuada eget commodo eget, hendrerit vel tellus. Suspendisse ultrices augue ut tellus ultrices, iaculis porttitor eros bibendum. Vivamus magna nunc, viverra at commodo in, mollis sed lectus.
             </p>

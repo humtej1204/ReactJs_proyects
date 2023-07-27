@@ -21,7 +21,7 @@
 
     .nosotros_whoWeAre {
         .whoWeAre_container {
-            padding: 50px 0;
+            padding: 25px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,11 +41,6 @@
                     font-weight: 800;
                     margin: 0.5rem 0 1.5rem 0;
                 }
-
-                p {
-                    width: 60%;
-                    min-width: 800px;
-                }
             }
 
             .whoWeAre_imgCont {
@@ -59,15 +54,15 @@
 
                 img {
                     width: 100%;
-                    aspect-ratio: 3/1 !important;
                     object-fit: cover;
-                    border-radius: 25px;
+                    border-radius: 10px;
                 }
             }
 
             .whoWeAre_contSect {
                 grid-area: contSect;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 gap: 2rem;
 
@@ -78,31 +73,84 @@
                 }
             }
         }
+
+        @media (min-width: 768px) {
+            .whoWeAre_container {
+                .whoWeAre_imgCont {
+                    img {
+                        aspect-ratio: 5/2;
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .whoWeAre_container {
+                padding: 50px 10px;
+
+                .whoWeAre_mainContSect {
+                    p {
+                        width: 60%;
+                        min-width: 800px;
+                    }
+                }
+
+                .whoWeAre_imgCont {
+                    img {
+                        aspect-ratio: 3/1;
+                    }
+                }
+
+                .whoWeAre_contSect {
+                    flex-direction: row;
+                }
+            }
+        }
     }
     
     .nosotros_whyWe {
         .whyWe_container {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 50px 0;
-            gap: 50px;
+            padding: 30px 0px;
+            gap: 10px;
             color: #333;
 
             .whyWe_leftSect {
                 align-self: flex-start;
-                width: 40%;
-                max-width: 600px;
+                width: 100%;
 
                 p {margin-top: 1.5rem;}
             }
 
             .whyWe_rightSect {
                 flex: 1;
-                max-width: 700px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .whyWe_container {
+                padding: 50px 10px;
+                flex-direction: row;
+                gap: 50px;
+
+                .whyWe_leftSect {
+                    width: 40%;
+                    max-width: 600px;
+
+                    h1 {max-width: 500px;}
+                }
+
+                .whyWe_rightSect {
+                    max-width: 700px;
+                }
             }
         }
     }
@@ -112,22 +160,24 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            gap: 50px;
-            padding: 50px 0;
+            gap: 20px;
+            padding: 25px 0;
     
             h1 {
                 text-align: center;
+                font-size: 1.7rem;
             }
     
             .container_selector {
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
-                gap: 5%;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
             }
     
             .selected_elem {
-                flex: 1;
+                max-width: 500px;
                 max-height: 700px;
     
                 img {
@@ -166,12 +216,11 @@
                    opacity: 1;
                    transform: translateX(0);
                 }
-             }  
+            }  
     
             .elem-container {
-                width: 50%;
-                max-width: 600px;
-                max-height: 700px;
+                max-width: 500px;
+                max-height: 500px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -204,8 +253,8 @@
     
                 .elem {
                     width: 100%;
-                    height: 120px;
                     display: flex;
+                    flex-direction: column;
                     opacity: 0.5;
     
                     &:hover {
@@ -215,7 +264,7 @@
                     }
     
                     img {
-                        width: 30%;
+                        width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
@@ -232,6 +281,48 @@
                 .elem_active {
                     opacity: 1;
                     box-shadow: 5px 5px 10px -5px rgba(#333, 0.25);
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            .services_container {
+                padding: 50px 10px;
+
+                h1 {font-size: 2.5rem;}
+
+                .container_selector {
+                    flex-direction: row;
+                    gap: 5%;
+                }
+
+                .elem-container {
+                    .elem {
+                        height: 120px;
+                        flex-direction: row;
+
+                        img {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services_container {
+                gap: 50px;
+                justify-content: space-between;
+
+                .selected_elem {
+                    flex: 1;
+                    max-width: 700px;
+                }
+    
+                .elem-container {
+                    width: 50%;
+                    max-width: 600px;
+                    max-height: 700px;
                 }
             }
         }

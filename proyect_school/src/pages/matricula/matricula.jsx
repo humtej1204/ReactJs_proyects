@@ -50,7 +50,6 @@ export function Matricula() {
     const index = Math.round(xPosition / 320);
 
     setMoreCard(index);
-    console.log(xPosition)
   }
 
   useEffect(() => {
