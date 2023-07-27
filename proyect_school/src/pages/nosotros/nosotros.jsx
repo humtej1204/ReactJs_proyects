@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 /* Components */
 import {BannerOverlay} from './components/BannerOverlay';
+import {ComponentSlider} from '../../components/componentSlider/ComponentSlider';
 
 /* Styles */
 import './nosotros.scss';
@@ -34,6 +35,25 @@ function ExpansibleReazon({data}) {
       </header>
 
       {expanded && <p>{data.content}</p>}
+    </div>
+  );
+}
+
+function SelectedElemCard({data, animated}) {
+  return (
+    <div className="selected_elemCard">
+      <img src={data.image} alt="" />
+      <div className="selected_elemCont">
+        <b>Profesores a cargo:</b>
+        <span>
+          {data.inCharge}
+        </span>
+
+        <h2>{data.service}</h2>
+        <p>
+          {data.description}
+        </p>
+      </div>
     </div>
   );
 }
@@ -131,6 +151,10 @@ export function Nosotros() {
           <h1>
             Programas y Servicios que ofrecemos a los Alumnos
           </h1>
+
+          <div className="container_slider">
+              <ComponentSlider data={servicesData} RefComponent={SelectedElemCard} />
+          </div>
 
           <div className="container_selector">
             <div className={`selected_elem ${animate?('fadeLeft'):('')}`}>

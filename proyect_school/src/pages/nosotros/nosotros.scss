@@ -167,16 +167,29 @@
                 text-align: center;
                 font-size: 1.7rem;
             }
+
+            .container_selector {display: none;}
+            .container_slider {display: flex;}
     
-            .container_selector {
+            .container_selector, .container_slider {
                 width: 100%;
-                display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 20px;
             }
+
+            .selected_elemCard {
+                box-shadow: 0 0 10px 0px rgba(#333, 0.25);
+                border-radius: 10px;
+                overflow: hidden;
+                height: 600px;
+
+                .selected_elemCont {
+                    margin: 0 1rem;
+                }
+            }
     
-            .selected_elem {
+            .selected_elem, .selected_elemCard {
                 max-width: 500px;
                 max-height: 700px;
     
@@ -291,7 +304,10 @@
 
                 h1 {font-size: 2.5rem;}
 
+                .container_slider {display: none;}
+
                 .container_selector {
+                    display: flex;
                     flex-direction: row;
                     gap: 5%;
                 }
