@@ -14,7 +14,7 @@ export function SelectedEvento() {
 
     return (
         <main id="selectedEvent_section">
-            <div className="section_container">
+            <div className="section_container container_responsive">
                 <section className="event_container">
                     <img src={main_sect} alt="" />
 
