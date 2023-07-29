@@ -24,11 +24,6 @@ function OferedItem({data}) {
 
       <h2>{data.tittle}</h2>
       <p>{data.description}</p>
-      
-      <a href="/home" className="btn-see_more">
-        Ver mas
-        <i className="fi fi-rr-arrow-right"></i>
-      </a>
     </div>
   );
 }

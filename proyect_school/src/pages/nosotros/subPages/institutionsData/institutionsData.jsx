@@ -19,48 +19,50 @@ export function InstitutionData() {
                 <MapMenu />
             </section>
 
-            <section id="data_section">
-                <h1>
-                    DATOS SOBRE LA
-                    <br />
-                    INSTITUCIÓN EDUCATIVA
-                </h1>
-                <p>
-                    La Institución educativa Colegio Alfredo Rebaza Acosta, es más que una Institución Educativa, es un entorno familiar, un grupo de profesionales altamente cualificados que protegen para que los estudiantes se integren adecuadamente, tanto en su vida personal como social y escolar.
-                </p>
+            <section className="data_section">
+                <article className="dataSect_container container_responsive">
+                    <h1>
+                        DATOS SOBRE LA
+                        <br />
+                        INSTITUCIÓN EDUCATIVA
+                    </h1>
+                    <p>
+                        La Institución educativa Colegio Alfredo Rebaza Acosta, es más que una Institución Educativa, es un entorno familiar, un grupo de profesionales altamente cualificados que protegen para que los estudiantes se integren adecuadamente, tanto en su vida personal como social y escolar.
+                    </p>
 
-                <div className="card-info">
-                    <img src={friendsImg} alt="" />
+                    <div className="card-info">
+                        <img src={friendsImg} alt="" />
 
-                    <div className="info_section">
-                        <div className="logo_info">
-                            <img src={logo} alt="Alfredo Rebaza Acosta Logo" />
+                        <div className="info_section">
+                            <div className="logo_info">
+                                <img src={logo} alt="Alfredo Rebaza Acosta Logo" />
 
-                            <div className="logo-text">
-                                <font color="#4285F4">ALFR</font>
-                                <font color="#34A853">EDO</font>
-                                <font color="#FBBC05"> REB</font>
-                                <font color="#EA4335">AZA</font>
-                                <br />
-                                <font color="#4285F4">ACO</font>
-                                <font color="#34A853">STA</font>
+                                <div className="logo-text">
+                                    <font color="#4285F4">ALFR</font>
+                                    <font color="#34A853">EDO</font>
+                                    <font color="#FBBC05"> REB</font>
+                                    <font color="#EA4335">AZA</font>
+                                    <br />
+                                    <font color="#4285F4">ACO</font>
+                                    <font color="#34A853">STA</font>
+                                </div>
+                            </div>
+
+                            <div className="info_container">
+                                {Object.entries(schoolData).map(([key, value]) => (
+                                    <div className="elem_label" key={'elem_label' + key}>
+                                        <span className="title_label">
+                                            {value.tittle}
+                                        </span>
+                                        <span className="value_label">
+                                            {value.value}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-
-                        <div className="info_container">
-                            {Object.entries(schoolData).map(([key, value]) => (
-                                <div className="elem_label" key={'elem_label' + key}>
-                                    <span className="title_label">
-                                        {value.tittle}
-                                    </span>
-                                    <span className="value_label">
-                                        {value.value}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
                     </div>
-                </div>
+                </article>
             </section>
         </main>
     );

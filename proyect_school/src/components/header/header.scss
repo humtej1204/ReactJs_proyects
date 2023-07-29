@@ -2,7 +2,7 @@
 
 #mainLayout_header {
     @include elem-flex( space-between );
-    @include elem-size( 100%, 80px );
+    @include elem-size( 100%, var(--header-height) );
     @include responsive(background-color, (
         ss: white, md: var(--blue)
     ));

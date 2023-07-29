@@ -23,7 +23,7 @@
     padding: 5px;
     top: 0;
     bottom: 0;
-    right: 50px;
+    right: 10px;
     width: 50px;
     height: 250px;
     background-color: #fff;
@@ -67,6 +67,10 @@
         position: absolute;
         z-index: 1;
     }
+
+    @media (min-width: 768px) {
+        right: 50px;
+    }
 }
 
 .menuBarRezised {
@@ -78,8 +82,12 @@
 }
 
 .menuBarDesplegated {
-    right: 350px !important;
+    right: 240px !important;
     box-shadow: none !important;
+
+    @media (min-width: 768px) {
+        right: 350px !important;
+    }
 }
 
 .menuIconActive {
@@ -157,8 +165,9 @@
 }
 
 #menuCard {
-    width: 320px;
-    height: 500px;
+    width: 270px;
+    height: 80vh;
+    max-height: 500px;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -174,7 +183,7 @@
     transition: all ease-in-out var(--menuAnimation-duration);
 
     &>.leftDivision {
-        width: 50px;
+        width: 25px;
         background-color: #4285F4;
     }
 
@@ -219,9 +228,22 @@
             }
         }
     }
+
+    @media (min-width: 768px) {
+        width: 320px;
+        height: 500px;
+
+        &>.leftDivision {
+            width: 50px;
+        }
+    }
 }
 
 .menuCardDesplegated {
-    right: 65px !important;
+    right: 10px !important;
     opacity: 1 !important;
+
+    @media (min-width: 768px) {
+        right: 65px !important;
+    }
 }

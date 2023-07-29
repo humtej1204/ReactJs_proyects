@@ -8,7 +8,6 @@
     left: auto;
     right: 20px;
     z-index: 10;
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: all ease 0.5s;
@@ -16,7 +15,6 @@
     * {
         transition: all ease 0.75s;
     }
-
 
     ul {
         position: absolute;
@@ -71,6 +69,14 @@
                 }
             }
         }
+    }
+
+    &.hidden_navigator {display: none;}
+
+    &.show_navigator {display: none;}
+
+    @media (min-width: 1024px) {
+        &.show_navigator{display: flex;}
     }
 }
 

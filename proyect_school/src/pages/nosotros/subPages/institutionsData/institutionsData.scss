@@ -15,22 +15,24 @@
         position: relative;
     }
 
-    #data_section {
-        @include card-shadow();
-        width: clamp(1024px, 100%, 1440px);
-        background-image: url('../../../../assets/imgs/nosotros/bg_poligon03.png');
+    .data_section {
+        width: 100%;
+        background-image: url('../../../../assets/imgs/nosotros/wave-haikei_poligon.svg');
         background-position: top;
         background-repeat: no-repeat;
-        background-size: 100% 75%;
+        background-size: cover;
+    }
+
+    .dataSect_container {
         color: white;
-        padding: 5rem 2.5rem;
+        padding: 50px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 20px;
 
         h1 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 900;
             text-align: center;
         }
@@ -42,15 +44,22 @@
 
         .card-info {
             @include card-shadow();
-            margin-top: 30px;
-            width: clamp(300px, 90%, 1200px);
-            height: 600px;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
             border-radius: 10px;
             background: white;
             display: flex;
+            flex-direction: column-reverse;
+            overflow: hidden;
+            padding: 25px 2.5%;
 
             &>img {
-                width: 450px;
+                width: 100%;
+                max-width: 300px;
+                margin: auto;
+                object-fit: contain;
             }
 
             .info_section {
@@ -59,7 +68,8 @@
                 align-items: center;
                 flex-direction: column;
                 justify-content: space-between;
-                padding: 1.5rem 2.5rem;
+                padding: 10px;
+                gap: 20px;
 
                 &>.logo_info {
                     width: 100%;
@@ -79,9 +89,9 @@
 
                 &>.info_container {
                     width: 100%;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 0.5rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
 
                     .elem_label {
                         width: 100%;
@@ -105,6 +115,44 @@
                             font-weight: 500;
                         }
                     }
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            h1 {font-size: 2rem;}
+
+            .card-info {
+                .info_section {
+                    .info_container {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 10px 20px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card-info {
+                margin-top: 30px;
+                flex-direction: row;
+                width: 90%;
+                max-width: none;
+                max-height: 600px;
+                padding: 20px;
+
+                .info_section {padding: 0 25px;}
+            }
+            
+        }
+
+        @media (min-width: 1280px) {
+            .card-info {
+                &>img {
+                    margin: 0;
+                    width: 40%;
+                    max-width: none;
                 }
             }
         }

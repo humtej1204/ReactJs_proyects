@@ -24,7 +24,7 @@ li {
 }
 
 .header-sep {
-    height: 80px;
+    height: var(--header-height);
 }
 
 body, #root {

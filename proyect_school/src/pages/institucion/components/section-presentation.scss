@@ -1,33 +1,28 @@
 .item-section {
     h1 {
-        font-size: 3.5rem;
+        font-size: 2.25rem;
         display: flex;
         align-items: center;
 
-        &::before {
+        &::before, &::after {
             content: url('../../../assets/imgs/institucion/decorator.png');
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
-            transform: translate(-7.5%, -12%);
         }
+        
+        &::before {transform: translate(0, -12%);}
+        &::after {transform: translate(0, -12%) rotateY(180deg);}
 
         span {
             width: max-content;
-            max-width: 375px;
-        }
-
-        &::after {
-            content: url('../../../assets/imgs/institucion/decorator.png');
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translate(7.5%, -12%) rotateY(180deg);
+            max-width: 350px;
+            margin: 0 25px;
         }
     }
 
     p {
-        margin: 0 0 3rem 0;
+        margin: 10px 0 50px 0;
     }
 
     button {
@@ -51,5 +46,14 @@
             background-color: white;
             color: #555;
         }
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 3.5rem;
+
+            &::before, &::after {display: flex;}
+        }
+        p {margin: 20px 0 75px 0;}
     }
 }

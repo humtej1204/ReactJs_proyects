@@ -44,6 +44,12 @@ export function Institucion() {
     };
   });
 
+  const handleNextSection = () => {
+    let newIndex = (slideIndex === sectionData.length)?(0):(slideIndex + 1);
+
+    setSlideIndex(newIndex);
+  }
+
   const handleDatosHijo = (datos) => {
     setSlideIndex(datos);
   };
@@ -57,7 +63,7 @@ export function Institucion() {
       />
 
       <div className="swipper-inner"
-      style={{ transform: `translateY(calc((100vh - 80px) * ${-slideIndex}))`}}>
+      style={{ transform: `translateY(calc((100vh - var(--header-height)) * ${-slideIndex}))`}}>
         
         <section className="full-window bg-sect" style={{ backgroundImage: `url(${main_sect})` }}>
           <div className="insti-sec-content main-section">
@@ -74,8 +80,12 @@ export function Institucion() {
           content={elem}
           key={index} />
         ))}
-
       </div>
+
+      <button className="nextInstitutionSect_btn"
+      onClick={handleNextSection}>
+        <i class="fi fi-sr-angle-small-down"></i>
+      </button>
     </main>
   );
 }
