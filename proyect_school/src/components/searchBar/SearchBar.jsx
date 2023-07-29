@@ -6,7 +6,7 @@ import './SearchBar.scss'
 export function SearchBar({ filterTypeList, sizeWidth = '800px' }) {
     return (
         <form className="search_container"
-        style={{width: sizeWidth}}>
+        style={{maxWidth: sizeWidth}}>
             <div className="search-input_container">
                 <i className="fi fi-br-caret-down"></i>
                 <select name="filterType">

@@ -11,7 +11,7 @@
         align-items: center;
         z-index: 3;
         position: relative;
-        padding: 50px;
+        padding: 10% 5%;
 
         .hero_bg_container {
             width: 100%;
@@ -23,6 +23,7 @@
 
             .hero_bg {
                 width: calc(100% + 40px);
+                height: calc(100% + 40px);
                 object-fit: cover;
                 margin: -20px;
                 filter: blur(10px);
@@ -30,32 +31,33 @@
         }
 
         .hero_data_container {
-            width: clamp(1024px, 90%, 1440px);
-            aspect-ratio: 8/3;
-            overflow: hidden;
+            width: 100%;
             z-index: 10;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 5%;
+            gap: 20px;
     
             .hero_data {
-                width: 35%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 color: white;
+                text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
                 
                 h1 {
                     margin: 1rem 0 0.5rem 0;
-                    font-size: 2rem;
+                    font-size: 1.75rem;
                     line-height: 2.2rem;
                     font-style: italic;
                 }
             }
     
             .hero_img {
-                width: 60%;
+                width: 100%;
                 height: 100%;
+                aspect-ratio: 4/3;
                 object-fit: cover;
             }
         }
@@ -182,6 +184,47 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.75rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hero_container {
+            padding: 50px;
+
+            .hero_bg_container {
+                height: 66%;
+            }
+
+            .hero_data_container {
+                .hero_img {
+                    aspect-ratio: 16/10 !important;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .hero_container {
+            .hero_bg_container {
+                height: 82.5%;
+            }
+
+            .hero_data_container {
+                width: clamp(1024px, 90%, 1440px);
+                flex-direction: row;
+                aspect-ratio: 8/3;
+                gap: 5%;
+
+                .hero_data {
+                    width: 35%;
+
+                    h1 {font-size: 2rem;}
+                }
+
+                .hero_img {
+                    width: 60%;
+                }
+            }
         }
     }
 }
