@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-0.062 -80.589 646.673 238.496" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" transform="translate(0 -279.172)" d="M0 0h647v438.77H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" style="" transform="matrix(1, 0, 0, 0.753233, 0, 39.383636)">
+    <mask id="b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="-280" width="648" height="438">
+      <path d="m-.286-161.328 122.135-97.536 240.265-20.594h235.689l24.312 144.445L646.428 9.432 556.9 157.023l-123.565-27.172-50.341-74.654h-173.62L-.286-161.328Z" fill="#C4C4C4"/>
+    </mask>
+    <g mask="url(#b)">
+      <path d="M407.616-203.781 384.261 58.078l262.213 151.855-.005-802.919-238.853 389.205Z" style="paint-order: fill; fill-rule: evenodd; fill: rgb(66, 133, 244);"/>
+      <path d="M-48.475-191.464 385.043 58.287l22.558-262.093-456.076 12.342Z" style="paint-order: fill; fill-rule: evenodd; fill: rgb(32, 64, 117);"/>
+      <path d="m-43.42-190.716 382.978 372.73 307.044 27.831L-43.42-190.716Z" style="paint-order: fill; fill-rule: evenodd; fill: rgb(52, 107, 194);"/>
+      <g style="mix-blend-mode:overlay" fill="#fff">
+        <path d="M466.546-74.097 450.498 16.7 620.45 5.46 466.546-74.097Z" fill-opacity=".6" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m620.45 5.46-54.028-111.825-99.877 32.268L620.45 5.46Z" fill-opacity=".36" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m450.498 16.701 161.598 95.164L620.45 5.459 450.498 16.701Z" fill-opacity=".81" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="M761.795 26.773 687.951-105.69 620.45 5.46l141.345 21.313Z" fill-opacity=".72" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m620.45 5.46 67.501-111.149-121.529-.676L620.45 5.46Z" fill-opacity=".3" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m323.246 38.042 68.028 67.653 59.224-88.994-127.252 21.341Z" fill-opacity=".39" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m450.498 16.701 70.537 167.787 91.061-72.623-161.598-95.164Z" fill-opacity=".57" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m323.246 38.042 127.252-21.34 16.048-90.8-143.3 112.14Z" fill-opacity=".36" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m391.273 105.696 129.762 78.792-70.537-167.787-59.225 88.995Z" fill-opacity=".3" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="M374.72-176.129 323.246 38.042l143.3-112.14-91.826-102.031Z" fill-opacity=".48" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m777.584 133.943-15.789-107.17-149.699 85.092 165.488 22.078Z" fill-opacity=".81" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m612.096 111.865 149.699-85.092L620.45 5.459l-8.354 106.406Z" fill-opacity=".54" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m521.035 184.488 136.068 19.015-45.007-91.638-91.061 72.623Z" fill-opacity=".84" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m280.053 191.295 132.696 22.297-21.475-107.896-111.221 85.599Z" fill-opacity=".66" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m391.274 105.696 21.475 107.896 108.287-29.104-129.762-78.792Z" fill-opacity=".87" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m521.035 184.488 56.076 65.198 79.992-46.183-136.068-19.015Z" fill-opacity=".39" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m247.326-102.578 17.521 148.942 58.399-8.321-75.92-140.621Z" fill-opacity=".66" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m323.246 38.042-43.193 153.253 111.221-85.599-68.028-67.654Z" fill-opacity=".3" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m657.103 203.502 120.481-69.56-165.487-22.077 45.006 91.637Z" fill-opacity=".63" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m374.72-176.129-127.394 73.551 75.92 140.62 51.474-214.171Z" fill-opacity=".39" style="fill-rule: evenodd; paint-order: fill;"/>
+        <path d="m264.847 46.364 15.206 144.931 43.193-153.252-58.399 8.32Z" fill-opacity=".42" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m130.337 105.31 149.716 85.985-15.206-144.931-134.51 58.946Z" fill-opacity=".72" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m280.053 191.295 41.432 76.325 91.264-54.028-132.696-22.297Z" fill-opacity=".3" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m247.326-102.578-94.942 68.181 112.463 80.76-17.521-148.941Z" fill-opacity=".66" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="M152.383-34.396 130.337 105.31l134.51-58.946-112.464-80.76Z" fill-opacity=".78" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m152.383-34.396-56.565 59.39 34.519 80.316 22.046-139.706Zm-34.01-72.591L95.817 24.994l56.566-59.39-34.01-72.591Z" fill-opacity=".69" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m130.338 105.31 23.212 110.904 126.503-24.919-149.715-85.985Z" fill-opacity=".48" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m86.089 265.855 67.461-49.641-116.078-34.565 48.617 84.206Z" fill-opacity=".51" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m153.55 216.214 68.295 118.29 58.208-143.209-126.503 24.919Z" fill-opacity=".9" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="M118.373-106.987 10.698-60.86l85.12 85.854 22.555-131.981Z" fill-opacity=".45" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m37.472 181.648 116.077 34.566-23.211-110.904-92.866 76.338Z" fill-opacity=".36" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m37.472 181.648 92.866-76.338-161.161-41.952 68.295 118.29Z" fill-opacity=".39" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m-30.823 63.358 161.161 41.952-34.52-80.316-126.641 38.364Z" fill-opacity=".42" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="m-92.751-43.905 61.928 107.263L10.699-60.86l-103.45 16.955Z" fill-opacity=".75" style="paint-order: fill; fill-rule: evenodd;"/>
+        <path d="M10.698-60.86-30.823 63.358 95.818 24.994 10.698-60.86Z" fill-opacity=".75" style="paint-order: fill; fill-rule: evenodd;"/>
+      </g>
+    </g>
+  </g>
+</svg>
