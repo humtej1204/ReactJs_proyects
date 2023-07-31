@@ -19,13 +19,20 @@ export function Eventos() {
 
     return (
         <main id="eventos-section">
-            <EventsBanner /> 
+            <EventsBanner />
 
-            <section className="searchbar_Section">
+            <section className="container_responsive">
                 <SearchBar filterTypeList={filterTypeList} sizeWidth={'100%'} />
+
+                <div className="filter_container">
+                    <button className="filter_btn">
+                        <span>Filtrar</span>
+                        <i className="fi fi-rs-settings-sliders"></i>
+                    </button>
+                </div>
             </section>
 
-            <section className="events_content">
+            <section className="events_content container_responsive">
                 <aside className="events_filter">
                     <h1>Articulos Publicados</h1>
                     <span>300 Resultados</span>

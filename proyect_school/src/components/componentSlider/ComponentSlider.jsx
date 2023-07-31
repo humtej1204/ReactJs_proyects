@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 /* Style */
 import './ComponentSlider.scss';
 
-export function ComponentSlider({data, RefComponent}) {
+export function ComponentSlider({data, RefComponent, elmMaxSize = 320}) {
     const sliderContRef = useRef();
     const sliderRef = useRef();
     const [contSize, setContSize] = useState(300)
@@ -39,7 +39,7 @@ export function ComponentSlider({data, RefComponent}) {
         const updateSliderData = () => {
             let elmPerPage = 0;
             let contSize = sliderContRef.current.offsetWidth;
-            let elmSize = (contSize >= 350)?(320):(300);
+            let elmSize = (contSize >= elmMaxSize)?(elmMaxSize):(300);
             let elmSep = 20;
     
             elmPerPage = parseInt(contSize / elmSize);

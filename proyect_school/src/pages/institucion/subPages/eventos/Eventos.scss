@@ -6,23 +6,17 @@
     justify-content: center;
     gap: 25px;
 
-    * {
-        font-family: Inter;
-    }
-    
-    .searchbar_Section {
-        width: min(1400px, 90%);
-    }
+    * {font-family: Inter;}
 
     .events_content {
-        width: min(1400px, 90%);
         display: flex;
         gap: 25px;
         margin-bottom: 40px;
     }
 
     .events_filter {
-        width: clamp(350px, 30%, 400px);
+        display: none;
+        width: clamp(300px, 30%, 400px);
         height: fit-content;
         background-color: white;
         padding: 2rem 1.5rem;
@@ -99,6 +93,37 @@
         }
     }
 
+    .filter_container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .filter_btn {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #444;
+            background-color: white;
+
+            &:hover {
+                background-color: #ccc;
+            }
+
+            &:active {
+                background-color: #eee;
+            }
+        }
+    }
+
     .events_list_container {
         flex: 1;
         display: flex;
@@ -107,18 +132,21 @@
 
         .event_card {
             width: 100%;
-            padding: 1rem;
+            max-height: 450px;
+            padding: 15px;
             border-radius: 5px;
             background-color: white;
             color: #333;
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 1.5rem;
             cursor: pointer;
 
             img {
-                width: 40%;
-                height: 225px;
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
             }
 
             .event_data_container {
@@ -161,6 +189,27 @@
             &:active {
                 background-color: #ffcf00;
             }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .events_list_container {
+            .event_card {
+                flex-direction: row;
+
+                img {
+                    width: 40%;
+                    height: 100%;
+                }
+                .event_data_container {height: 225px;}
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .events_filter {display: inline;}
+        .container_responsive{
+            .filter_container {display: none;}
         }
     }
 }

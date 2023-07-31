@@ -34,13 +34,14 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin: 25px 0;
+        margin: 20px 0;
 
         .slider_indicator {
             width: 1rem;
             height: 1rem;
             border-radius: 100%;
-            background-color: rgba(#666, 0.5);
+            background-color: rgba(white, 0.5);
+            backdrop-filter: invert(75%);
             cursor: pointer;
         }
 

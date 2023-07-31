@@ -84,7 +84,7 @@ export function Institucion() {
 
       <button className="nextInstitutionSect_btn"
       onClick={handleNextSection}>
-        <i class="fi fi-sr-angle-small-down"></i>
+        <i className="fi fi-sr-angle-small-down"></i>
       </button>
     </main>
   );
